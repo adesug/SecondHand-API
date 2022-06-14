@@ -1,5 +1,6 @@
-const { User } = require('../models')
+const { User } = require('../models/index')
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 
 class AuthController {
   static async register(req, res, next) {
@@ -33,6 +34,41 @@ console.log(user)
       next(err)
     }
   }
+  //ade
+  static async login (req,res,next) {
+    try {
+      const user = await User.findOne ({
+        where: {
+          email : req.body.email
+        }
+      })
+      if (user) {
+        if(bcrypt.compareSync(req.body.password, user.password)){
+          const token = jwt.sign({
+            id: user.id,
+            email: user.email
+            
+          }, 'testing')
+          res.status(200).json({
+            token,
+          })
+        }else{
+          throw {
+            status: 400,
+            message: 'Invalid username or password'
+          }
+        }
+      }else {
+        throw {
+          status : 400,
+          message : 'Invalid username or password'
+        }
+      }
+    } catch (err) {
+      next(err)
+    }
+  }
+
 
 }
 

@@ -4,9 +4,9 @@ const authRoutes = require('../routes/authRoutes')
 const errorHandler = require('../helpers/errorHandler.helper')
 
 
-// ...
 
-router.use('/auth', authRoutes)
+//aku tambahin /api
+router.use('/api/auth', authRoutes)
 router.use(errorHandler)
 
 module.exports = router
