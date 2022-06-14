@@ -18,12 +18,15 @@ module.exports = {
         type: Sequelize.STRING
       },
       kota: {
+        allowNull: true,
         type: Sequelize.STRING
       },
       alamat: {
+        allowNull: true,
         type: Sequelize.STRING
       },
       telp: {
+        allowNull: true,
         type: Sequelize.STRING
       },
       createdAt: {
