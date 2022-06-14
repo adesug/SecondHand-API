@@ -12,7 +12,7 @@ class AuthController {
           email: req.body.email
         }
       })
-
+console.log(user)
       if (user) {
         throw {
           status: 400,
