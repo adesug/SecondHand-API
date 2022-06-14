@@ -8,6 +8,13 @@ const userValidationRules = () => {
   ]
 }
 
+const userValidationLogin = () => {
+  return [
+    body('email').notEmpty().withMessage('Email is required'),
+    body('password').notEmpty().withMessage('Password is required')
+  ]
+}
+
 const validate = (req, res, next) => {
   const errors = validationResult(req)
   if (errors.isEmpty()) {
@@ -23,5 +30,6 @@ const validate = (req, res, next) => {
 
 module.exports = {
   userValidationRules,
+  userValidationLogin,
   validate,
 }
