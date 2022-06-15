@@ -2,6 +2,7 @@ const { User } = require('../models/index')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
+
 class AuthController {
   static async register(req, res, next) {
     try {
@@ -13,7 +14,7 @@ class AuthController {
           email: req.body.email
         }
       })
-console.log(user)
+
       if (user) {
         throw {
           status: 400,
@@ -48,7 +49,7 @@ console.log(user)
             id: user.id,
             email: user.email
             
-          }, 'testing')
+          }, process.env.JWT_SECRET)
           res.status(200).json({
             token,
           })
@@ -72,4 +73,6 @@ console.log(user)
 
 }
 
+
+require('dotenv').config()
 module.exports = AuthController
