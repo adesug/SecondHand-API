@@ -35,7 +35,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       status: {
-        type: Sequelize.ENUM('diterima', 'ditolak', 'menunggu', 'dijual')
+        type: Sequelize.ENUM('diterima', 'ditolak', 'menunggu', 'dijual'), defaultValue:'dijual',
       },
       createdAt: {
         allowNull: false,

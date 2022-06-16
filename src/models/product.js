@@ -23,7 +23,11 @@ module.exports = (sequelize, DataTypes) => {
     foto_produk_1: DataTypes.STRING,
     foto_produk_2: DataTypes.STRING,
     foto_produk_3: DataTypes.STRING,
-    status: DataTypes.ENUM('diterima', 'ditolak', 'menunggu', 'dijual')
+    status:    {
+      type : DataTypes.ENUM,
+      values: ['diterima','ditolak', 'dijual', 'menunggu'],
+      defaultValue: 'dijual'
+    }
   }, {
     sequelize,
     modelName: 'Product',

@@ -23,7 +23,13 @@ const upload = multer({
 
 
 
-router.post('/create',upload.single('foto_produk_1'),ProductController.create)
+router.post('/create',upload.fields([{
+           name: 'foto_produk_1', maxCount: 1
+         }, {
+           name: 'foto_produk_2', maxCount: 1
+         },{
+           name: 'foto_produk_3', maxCount: 1
+         }]), ProductController.create)
 
 
 
