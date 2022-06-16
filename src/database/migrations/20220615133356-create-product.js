@@ -17,7 +17,23 @@ module.exports = {
       harga: {
         type: Sequelize.INTEGER
       },
-      kategori_id: {
+      kategori_id_1: {
+        type: Sequelize.INTEGER
+      },
+      kategori_id_2: {
+        allowNull: true,
+        type: Sequelize.INTEGER
+      },
+      kategori_id_3: {
+        allowNull: true,
+        type: Sequelize.INTEGER
+      },
+      kategori_id_4: {
+        allowNull: true,
+        type: Sequelize.INTEGER
+      },
+      kategori_id_5: {
+        allowNull: true,
         type: Sequelize.INTEGER
       },
       deskripsi: {
@@ -35,7 +51,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       status: {
-        type: Sequelize.ENUM('diterima', 'ditolak', 'menunggu', 'dijual'), defaultValue:'dijual',
+        type: Sequelize.ENUM('dijual','diterima', 'ditolak', 'menunggu'), defaultValue:'dijual',
       },
       createdAt: {
         allowNull: false,
