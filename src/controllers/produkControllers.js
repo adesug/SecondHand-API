@@ -1,15 +1,19 @@
 const { Product } = require('../models')
+const cloudinary = require('../config/cloudinary.service')
+  
 
 class ProductController {
   static async create(req, res, next) {
-    console.log(req.body)
+    
     try {
-        if (req.files) {
-          req.body.foto_produk_1 = `http://localhost:3000/${req.files.foto_produk_1[0].filename}`,
-          req.body.foto_produk_2 = `http://localhost:3000/${req.files.foto_produk_2[0].filename}`,
-          req.body.foto_produk_3 = `http://localhost:3000/${req.files.foto_produk_3[0].filename}`
-          // console.log(req.files)
-        }
+    //  console.log(req.files)
+    // const result1 = await cloudinary.uploader.upload(req.files.foto_produk_1.path);
+    // console.log(result1);
+
+           const foto_produk_1 = await cloudinary.uploader.upload(req.files.foto_produk_1[0].path);
+           const foto_produk_2 = await cloudinary.uploader.upload(req.files.foto_produk_2[0].path);
+           const foto_produk_3 = await cloudinary.uploader.upload(req.files.foto_produk_3[0].path);
+        
       await Product.create({
         nama: req.body.nama,
         user_id: req.body.user_id,
@@ -20,9 +24,9 @@ class ProductController {
         kategori_id_4: req.body.kategori_id_4,
         kategori_id_5: req.body.kategori_id_5,
         deskripsi: req.body.deskripsi,
-        foto_produk_1: req.body.foto_produk_1,
-        foto_produk_2: req.body.foto_produk_2,
-        foto_produk_3: req.body.foto_produk_3
+        foto_produk_1:  foto_produk_1.secure_url,
+        foto_produk_2: foto_produk_2.secure_url,
+        foto_produk_3: foto_produk_3.secure_url,
       })
       res.status(200).json({
         message: 'Successfully create product'
