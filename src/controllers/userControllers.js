@@ -1,12 +1,20 @@
 const { User } = require('../models/index')
+const cloudinary = require('../config/cloudinary.service')
 
 class UpdateUserController {
     static async update(req,res,next) {
         try {
             const {id} = req.params;
+            const foto_profil = await cloudinary.uploader.upload(req.file.path);
+            // console.log(foto_profil);
             const {body} = req;
+            let newData = {
+                ...body,
+                foto_profil: foto_profil.secure_url    
+            }
+            console.log(newData);
             let findUser = await User.findOne({
-                where: {
+                where : {
                     id,
                 }
             })
@@ -16,23 +24,21 @@ class UpdateUserController {
                     status : 404,
                 })
             }else {
-                 User.update(body,{
+             await User.update(newData,{
                     where : {
                         id,
                     }
                 })
+                const resObject = {...findUser.dataValues, ...body}
                 res.status(200).send({
                     message : "Successfully update data user",
                     status : 200,
-                    findUser
+                    resObject
                 })
             }
         } catch (err) {
             next(err)
-        }
-
-      
-    }
-    
+        } 
+    } 
 }
 module.exports = UpdateUserController

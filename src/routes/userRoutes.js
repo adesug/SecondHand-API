@@ -1,7 +1,24 @@
 const express = require('express')
 const router = express.Router()
 const UserController = require('../controllers/userControllers')
+const multer = require('multer')
+const storage = require('../helpers/multerStorage.helper')
 
-router.put('/update/:id', UserController.update)
+const fs = require('fs');
+const upload = multer({
+    storage,
+    limits : {
+        fileSize : 10000000
+    },
+    fileFilter: (req,file,cb) => {
+        if(file.mimetype.match('image')) {
+            cb(null, true)
+        }else {
+            cb(Error, false)
+        }
+    }
+})
+
+router.put('/update/:id',upload.single('foto_profil'),UserController.update)
 
 module.exports = router

@@ -9,11 +9,9 @@ class ProductController {
     //  console.log(req.files)
     // const result1 = await cloudinary.uploader.upload(req.files.foto_produk_1.path);
     // console.log(result1);
-
            const foto_produk_1 = await cloudinary.uploader.upload(req.files.foto_produk_1[0].path);
            const foto_produk_2 = await cloudinary.uploader.upload(req.files.foto_produk_2[0].path);
-           const foto_produk_3 = await cloudinary.uploader.upload(req.files.foto_produk_3[0].path);
-        
+           const foto_produk_3 = await cloudinary.uploader.upload(req.files.foto_produk_3[0].path);  
       await Product.create({
         nama: req.body.nama,
         user_id: req.body.user_id,
