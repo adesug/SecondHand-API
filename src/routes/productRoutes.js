@@ -6,6 +6,10 @@ const storage = require('../helpers/multerStorage.helper')
 const {
   authentication
 } = require('../helpers/authMiddlewares.helper')
+const {
+  validateCreateProduk,
+  validate,
+} = require('../helpers/validator.helper')
 
 const fs = require('fs');
 const upload = multer({
@@ -23,7 +27,7 @@ const upload = multer({
 })
 
 
-router.post('/create', authentication, upload.fields([{
+router.post('/create', authentication, validateCreateProduk, validate, upload.fields([{
   name: 'foto_produk_1',
   maxCount: 1
 }, {

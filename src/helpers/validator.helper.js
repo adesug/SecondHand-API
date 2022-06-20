@@ -15,6 +15,16 @@ const userValidationLogin = () => {
   ]
 }
 
+const validateCreateProduk = (req, res, next) => {
+  return [
+    body('nama').notEmpty().withMessage('Nama Harus diisi!'),
+    body('kategori_id_1').notEmpty().withMessage('kategori minimal 1!'),
+    body('harga').notEmpty().withMessage('Harga harus diisi!'),
+    body('deskripsi').notEmpty.withMessage('Deskripsi harus diisi'),
+    body('foto_produk_1').notEmpty('Foto minimal 1')
+  ]
+}
+
 const validate = (req, res, next) => {
   const errors = validationResult(req)
   if (errors.isEmpty()) {
@@ -28,8 +38,11 @@ const validate = (req, res, next) => {
   })
 }
 
+
+
 module.exports = {
   userValidationRules,
   userValidationLogin,
   validate,
+  validateCreateProduk,
 }
