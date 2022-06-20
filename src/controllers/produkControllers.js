@@ -8,14 +8,9 @@ class ProductController {
   static async create(req, res, next) {
 
     try {
-      //  console.log(req.files)
-      // const result1 = await cloudinary.uploader.upload(req.files.foto_produk_1.path);
-      // console.log(result1);
-
       const foto_produk_1 = await cloudinary.uploader.upload(req.files.foto_produk_1[0].path);
       const foto_produk_2 = await cloudinary.uploader.upload(req.files.foto_produk_2[0].path);
       const foto_produk_3 = await cloudinary.uploader.upload(req.files.foto_produk_3[0].path);
-
       await Product.create({
         nama: req.body.nama,
         user_id: req.user.id,
@@ -94,40 +89,40 @@ class ProductController {
       next(err)
     }
   }
-    static async deleteAfterSold(req, res, next) {
-      try {
-        const product = await Product.findOne({
-          where: {
-            id: req.params.id
-          }
-        })
+  static async deleteAfterSold(req, res, next) {
+    try {
+      const product = await Product.findOne({
+        where: {
+          id: req.params.id
+        }
+      })
 
-        if (!product) {
+      if (!product) {
+        throw {
+          status: 404,
+          message: 'Product not found'
+        }
+      } else {
+        if (product.user_id !== req.user.id) {
           throw {
-            status: 404,
-            message: 'Product not found'
+            status: 401,
+            message: 'Unauthorized request'
           }
         } else {
-          if (product.user_id !== req.user.id) {
-            throw {
-              status: 401,
-              message: 'Unauthorized request'
+          await Product.destroy({
+            where: {
+              id: req.params.id
             }
-          } else {
-            await Product.destroy({
-              where: {
-                id: req.params.id
-              }
-            })
-            res.status(200).json({
-              message: 'Product has been SOLD!'
-            })
-          }
+          })
+          res.status(200).json({
+            message: 'Product has been SOLD!'
+          })
         }
-      } catch (err) {
-        next(err)
       }
+    } catch (err) {
+      next(err)
     }
+  }
 }
 
 module.exports = ProductController
