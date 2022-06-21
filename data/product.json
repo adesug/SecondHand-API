@@ -1,0 +1,309 @@
+[
+    {
+        "nama" : "Jam Tangan",
+        "user_id" : "1",
+        "harga" : "100000",
+        "kategori_id_1" : 1,
+        "kategori_id_2" : 2,
+        "kategori_id_3" : null,
+        "kategori_id_4" : null,
+        "kategori_id_5" : null,
+        "deskripsi" : "Jam tangan pria",
+        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+        
+    },
+    {
+        "nama" : "Motor",
+        "user_id" : "1",
+        "harga" : "100000",
+        "kategori_id_1" : 2,
+        "kategori_id_2" : null,
+        "kategori_id_3" : null,
+        "kategori_id_4" : null,
+        "kategori_id_5" : null,
+        "deskripsi" : "Motor anyar ges",
+        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+        
+    },
+    {
+        "nama" : "Baju koko",
+        "user_id" : "1",
+        "harga" : "5000",
+        "kategori_id_1" : 3,
+        "kategori_id_2" : null,
+        "kategori_id_3" : null,
+        "kategori_id_4" : null,
+        "kategori_id_5" : null,
+        "deskripsi" : "Baju baru ges",
+        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+        
+    },
+    {
+        "nama" : "Tas Eiger",
+        "user_id" : "1",
+        "harga" : "450000",
+        "kategori_id_1" : 3,
+        "kategori_id_2" : null,
+        "kategori_id_3" : null,
+        "kategori_id_4" : null,
+        "kategori_id_5" : null,
+        "deskripsi" : "Tas baru",
+        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+        
+    },
+    {
+        "nama" : "Baju Bola",
+        "user_id" : "1",
+        "harga" : "45000",
+        "kategori_id_1" : 1,
+        "kategori_id_2" : null,
+        "kategori_id_3" : null,
+        "kategori_id_4" : null,
+        "kategori_id_5" : null,
+        "deskripsi" : "Baju baru",
+        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+        
+    },
+    {
+        "nama" : "Masker Duckbil",
+        "user_id" : "1",
+        "harga" : "10000",
+        "kategori_id_1" : 5,
+        "kategori_id_2" : null,
+        "kategori_id_3" : null,
+        "kategori_id_4" : null,
+        "kategori_id_5" : null,
+        "deskripsi" : "Masker baru",
+        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+        
+    }
+    ,
+    {
+        "nama" : "Radio",
+        "user_id" : "1",
+        "harga" : "300000",
+        "kategori_id_1" : 4,
+        "kategori_id_2" : null,
+        "kategori_id_3" : null,
+        "kategori_id_4" : null,
+        "kategori_id_5" : null,
+        "deskripsi" : "Radio mberr",
+        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+        
+    },
+    {
+        
+            "nama" : "Minyak GPU",
+            "user_id" : "1",
+            "harga" : "10000",
+            "kategori_id_1" : 5,
+            "kategori_id_2" : null,
+            "kategori_id_3" : null,
+            "kategori_id_4" : null,
+            "kategori_id_5" : null,
+            "deskripsi" : "Minyak gosok pijat urut",
+            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+            
+        },
+        {
+            
+                "nama" : "Laptop Asus Vivobook",
+                "user_id" : "1",
+                "harga" : "6000000",
+                "kategori_id_1" : 4,
+                "kategori_id_2" : null,
+                "kategori_id_3" : null,
+                "kategori_id_4" : null,
+                "kategori_id_5" : null,
+                "deskripsi" : "Laptop bekas garansi",
+                "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+                "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+                "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+                
+        },
+        {  
+                "nama" : "Helm",
+                "user_id" : "1",
+                "harga" : "100000",
+                "kategori_id_1" : 2,
+                "kategori_id_2" : null,
+                "kategori_id_3" : null,
+                "kategori_id_4" : null,
+                "kategori_id_5" : null,
+                "deskripsi" : "Masker baru",
+                "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+                "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+                "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+                
+                
+        },
+        {
+            "nama" : "Mobil Toyota Rush",
+            "user_id" : "1",
+            "harga" : "3000000",
+            "kategori_id_1" : 2,
+            "kategori_id_2" : null,
+            "kategori_id_3" : null,
+            "kategori_id_4" : null,
+            "kategori_id_5" : null,
+            "deskripsi" : "Tahun 2020",
+            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+            
+        },
+        {
+            "nama" : "Kemeja",
+            "user_id" : 1,
+            "harga" : "30000",
+            "kategori_id_1" : 3,
+            "kategori_id_2" : null,
+            "kategori_id_3" : null,
+            "kategori_id_4" : null,
+            "kategori_id_5" : null,
+            "deskripsi" : "Baju Baru",
+            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+            
+        },
+        {
+            "nama" : "Sun screen",
+            "user_id" : "1",
+            "harga" : "45000",
+            "kategori_id_1" : 5,
+            "kategori_id_2" : null,
+            "kategori_id_3" : null,
+            "kategori_id_4" : null,
+            "kategori_id_5" : null,
+            "deskripsi" : "Produk original",
+            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+            
+        },
+        {
+            "nama" : "Monitor LG 22 INC",
+            "user_id" : "1",
+            "harga" : "3000000",
+            "kategori_id_1" : 4,
+            "kategori_id_2" : null,
+            "kategori_id_3" : null,
+            "kategori_id_4" : null,
+            "kategori_id_5" : null,
+            "deskripsi" : "Barang baru",
+            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+            
+        },
+        {
+            "nama" : "Raket yonex",
+            "user_id" : "1",
+            "harga" : "300000",
+            "kategori_id_1" : 1,
+            "kategori_id_2" : 5,
+            "kategori_id_3" : null,
+            "kategori_id_4" : null,
+            "kategori_id_5" : null,
+            "deskripsi" : "isi 2",
+            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+           
+        },
+        {
+            "nama" : "Sepatu running",
+            "user_id" : "1",
+            "harga" : "200000",
+            "kategori_id_1" : 5,
+            "kategori_id_2" : 1,
+            "kategori_id_3" : null,
+            "kategori_id_4" : null,
+            "kategori_id_5" : null,
+            "deskripsi" : "Tahun 2020",
+            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+            
+        },
+        {
+            "nama" : "Celana bahan hitam",
+            "user_id" : "1",
+            "harga" : "100000",
+            "kategori_id_1" : 3,
+            "kategori_id_2" : null,
+            "kategori_id_3" : null,
+            "kategori_id_4" : null,
+            "kategori_id_5" : null,
+            "deskripsi" : "Ukuran 32",
+            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+            
+        },
+        {
+            "nama" : "Sandal Eiger",
+            "user_id" : "1",
+            "harga" : "100000",
+            "kategori_id_1" : 3,
+            "kategori_id_2" : null,
+            "kategori_id_3" : null,
+            "kategori_id_4" : null,
+            "kategori_id_5" : null,
+            "deskripsi" : "Ukuran 43",
+            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+            
+        },
+        {
+            "nama" : "Sepeda Lipat",
+            "user_id" : "1",
+            "harga" : "1500000",
+            "kategori_id_1" : 2,
+            "kategori_id_2" : 1,
+            "kategori_id_3" : null,
+            "kategori_id_4" : null,
+            "kategori_id_5" : null,
+            "deskripsi" : "Bekas",
+            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+            
+        },
+        {
+            "nama" : "Barbel 5kg",
+            "user_id" : "1",
+            "harga" : "60000",
+            "kategori_id_1" : 1,
+            "kategori_id_2" : 5,
+            "kategori_id_3" : null,
+            "kategori_id_4" : null,
+            "kategori_id_5" : null,
+            "deskripsi" : "Berat 5KG bahan besi",
+            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
+            
+        }
+        
+    
+
+]

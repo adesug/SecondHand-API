@@ -6,7 +6,6 @@ class UpdateUserController {
         try {
             const {id} = req.params;
             const foto_profil = await cloudinary.uploader.upload(req.file.path);
-            // console.log(foto_profil);
             const {body} = req;
             let newData = {
                 ...body,
