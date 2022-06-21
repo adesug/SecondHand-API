@@ -27,7 +27,7 @@ const upload = multer({
 })
 
 
-router.post('/create', authentication, validateCreateProduk, validate, upload.fields([{
+router.post('/create', authentication,  upload.fields([{
   name: 'foto_produk_1',
   maxCount: 1
 }, {
@@ -36,7 +36,7 @@ router.post('/create', authentication, validateCreateProduk, validate, upload.fi
 }, {
   name: 'foto_produk_3',
   maxCount: 1
-}]), ProductController.create)
+}]), validateCreateProduk(), validate, ProductController.create)
 
 
 router.get('/list', ProductController.list)
