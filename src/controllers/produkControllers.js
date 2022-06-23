@@ -1,8 +1,8 @@
 const {
-  Product,Category
+  Product,Category, sequelize
 } = require('../models')
 const cloudinary = require('../config/cloudinary.service')
-const Op = require("sequelize").Op;
+const {Op} = require("sequelize");
 
 
 class ProductController {
@@ -214,13 +214,13 @@ class ProductController {
     }
   }
   static async FilterByProductName(req,res,next)  {
+   
     try {
+      let  {q= ""} = req.query;
       let data = await Product.findAll({
         where: {
-          nama : req.query.nama
-          // nama : {
-          //   [Op.like]: '%' + request.body.query + '%'
-          // }
+          // nama : req.query.nama
+          nama : sequelize.where(sequelize.fn('LOWER', sequelize.col('nama')), 'LIKE', `%${q}%`)
         }
       })
       res.status(200).json({
