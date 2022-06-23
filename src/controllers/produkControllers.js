@@ -1,7 +1,8 @@
 const {
-  Product
+  Product,Category
 } = require('../models')
 const cloudinary = require('../config/cloudinary.service')
+const Op = require("sequelize").Op;
 
 
 class ProductController {
@@ -167,6 +168,54 @@ class ProductController {
       next(err)
     }
   }
+  static async updateProduk(req,res,next) {
+    try {
+      const produk = await Product.findOne({
+        where: {
+          userId : req.user.id,
+          id: req.params.id
+        }
+      })
+      if(!produk) {
+        throw {
+          status : 404,
+          message: 'Product is not found'
+        }
+      }else {
+        await Product.update(req.body, {
+          where: {
+            userId : req.user.id,
+            id: req.params.id
+          }
+        })
+        res.status(200).json({
+          message: 'Successfully update product'
+        })
+      }
+    } catch (err) {
+      next(err)
+    }
+  }
+  static async FilterByProductName(req,res,next)  {
+    try {
+      let data = await Product.findAll({
+        where: {
+          nama : req.query.nama
+          // nama : {
+          //   [Op.like]: '%' + request.body.query + '%'
+          // }
+        }
+      })
+      res.status(200).json({
+        message : 'Successfully filter by category',
+        data
+
+      })
+    } catch (err) {
+      next(err)
+    }
+  }
+
 }
 
 module.exports = ProductController

@@ -2,7 +2,7 @@ module.exports = {
   
     "development": {
       "username": "postgres",
-      "password": "dimasslalu123",
+      "password": "plugin",
       "database": "Secondhand",
       "host": "127.0.0.1",
       "dialect": "postgres"
@@ -22,4 +22,3 @@ module.exports = {
       "dialect": "mysql"
     }
   };
-  
