@@ -39,7 +39,8 @@ router.post('/create', authentication,  upload.fields([{
 }]), validateCreateProduk(), validate, ProductController.create)
 
 
-router.get('/list', ProductController.list)
+router.get('/list',
+  ProductController.list)
 router.get('/list-by-id', authentication, ProductController.listId)
 router.delete('/deleteByUser/:id', authentication, ProductController.deleteByUser)
 router.delete('/delete-after-sold/:id', authentication, ProductController.deleteAfterSold)

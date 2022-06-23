@@ -80,8 +80,25 @@ class ProductController {
 
   static async list(req, res, next) {
     try {
-      const product = await Product.findAll()
-      res.status(200).json(product)
+          const pageAsNumber = Number.parseInt(req.query.page)
+          const sizeAsNumber = Number.parseInt(req.query.size)
+          let page = 0;
+          let size = 5;
+      if (!Number.isNaN(pageAsNumber) && pageAsNumber > 0) {
+        page = pageAsNumber;
+      }
+      if (!Number.isNaN(sizeAsNumber) && sizeAsNumber > 0) {
+        size = sizeAsNumber;
+      }
+      const product = await Product.findAndCountAll({
+        limit: size,
+        offset: page * size
+      })
+
+      res.status(200).json({
+        content: product.rows,
+        totalPages : Math.ceil(product.count/size)
+      })
     } catch (err) {
       next(err)
     }
