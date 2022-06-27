@@ -12,6 +12,7 @@ const {
 } = require('../helpers/validator.helper')
 
 const fs = require('fs');
+const { route } = require('./authRoutes')
 const upload = multer({
   storage,
   limits: {
@@ -46,6 +47,7 @@ router.delete('/deleteByUser/:id', authentication, ProductController.deleteByUse
 router.delete('/delete-after-sold/:id', authentication, ProductController.deleteAfterSold)
 router.put('/update/:id', authentication, ProductController.updateProduk)
 router.get('/filter', ProductController.FilterByProductName);
+router.get('/filterByCategory', ProductController.FilterByCategory);
 
 
 module.exports = router

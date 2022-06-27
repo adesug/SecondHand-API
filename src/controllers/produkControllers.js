@@ -232,6 +232,79 @@ class ProductController {
       next(err)
     }
   }
+  static async FilterByCategory (req,res,next) {
+    try {
+      let data  = await Product.findAll(
+        {
+        // where : {
+        //   // kategori_id_1: req.query.kategori_id
+        //   [Op.in] : [
+        //     {kategori_id_1: 2},
+        //     {kategori_id_2: 2},
+        //     {kategori_id_3: 2}
+        //   ]
+        // },
+        // where : {
+        //   kategori_id_2: req.query.kategori_id
+        // },
+        where: {
+          $or: [{ 
+              kategori_id_1: req.query.kategori_id
+              
+            },
+            {
+              kategori_id_2: req.query.kategori_id
+              
+            },
+            {
+              kategori_id_3: req.query.kategori_id
+              
+            },
+            {
+              kategori_id_4: req.query.kategori_id
+              
+            },
+            {
+              kategori_id_5: req.query.kategori_id
+              
+            },
+          ]
+        },
+       
+       
+        include : [
+          {
+            model : Category,
+            as : 'kategori_1'
+          },
+          {
+            model : Category,
+            as : 'kategori_2'
+          },
+          {
+            model : Category,
+            as : 'kategori_3'
+          },
+          {
+            model : Category,
+            as : 'kategori_4'
+          },
+          {
+            model : Category,
+            as : 'kategori_5'
+          }
+        ]
+                 
+      })
+      res.status(200).json({
+        message : "Success",
+        data
+      });
+      
+    } catch (err) {
+      next(err)
+    }
+  }
 
 }
 
