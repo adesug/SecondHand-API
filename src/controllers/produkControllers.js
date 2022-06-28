@@ -1,13 +1,15 @@
 const {
   Product,
   Category,
-  User
+  User,
+ sequelize
 } = require('../models')
 const {
   Op
 } = require('sequelize')
 const jwt = require('jsonwebtoken')
 const cloudinary = require('../config/cloudinary.service')
+const {Op} = require("sequelize");
 
 
 class ProductController {
@@ -281,35 +283,29 @@ class ProductController {
       next(err)
     }
   }
-  static async deleteAfterSold(req, res, next) {
+  static async updateProduk(req,res,next) {
     try {
-      const product = await Product.findOne({
+      const produk = await Product.findOne({
         where: {
+          userId : req.user.id,
           id: req.params.id
         }
       })
-
-      if (!product) {
+      if(!produk) {
         throw {
-          status: 404,
-          message: 'Product not found'
+          status : 404,
+          message: 'Product is not found'
         }
-      } else {
-        if (product.user_id !== req.user.id) {
-          throw {
-            status: 401,
-            message: 'Unauthorized request'
+      }else {
+        await Product.update(req.body, {
+          where: {
+            userId : req.user.id,
+            id: req.params.id
           }
-        } else {
-          await Product.destroy({
-            where: {
-              id: req.params.id
-            }
-          })
-          res.status(200).json({
-            message: 'Product has been SOLD!'
-          })
-        }
+        })
+        res.status(200).json({
+          message: 'Successfully update product'
+        })
       }
     } catch (err) {
       next(err)
