@@ -151,40 +151,6 @@ class ProductController {
       next(err)
     }
   }
-  static async deleteAfterSold(req, res, next) {
-    try {
-      const product = await Product.findOne({
-        where: {
-          id: req.params.id
-        }
-      })
-
-      if (!product) {
-        throw {
-          status: 404,
-          message: 'Product not found'
-        }
-      } else {
-        if (product.user_id !== req.user.id) {
-          throw {
-            status: 401,
-            message: 'Unauthorized request'
-          }
-        } else {
-          await Product.destroy({
-            where: {
-              id: req.params.id
-            }
-          })
-          res.status(200).json({
-            message: 'Product has been SOLD!'
-          })
-        }
-      }
-    } catch (err) {
-      next(err)
-    }
-  }
   static async updateProduk(req,res,next) {
     try {
       const produk = await Product.findOne({
