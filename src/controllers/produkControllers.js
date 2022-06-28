@@ -1,6 +1,12 @@
 const {
-  Product
+  Product,
+  Category,
+  User
 } = require('../models')
+const {
+  Op
+} = require('sequelize')
+const jwt = require('jsonwebtoken')
 const cloudinary = require('../config/cloudinary.service')
 
 
@@ -22,6 +28,7 @@ class ProductController {
           kategori_id_4: req.body.kategori_id_4,
           kategori_id_5: req.body.kategori_id_5,
           deskripsi: req.body.deskripsi,
+          status: req.body.status,
           foto_produk_1: foto_produk_1.secure_url,
           foto_produk_2: foto_produk_2.secure_url,
           foto_produk_3: foto_produk_3.secure_url,
@@ -43,13 +50,14 @@ class ProductController {
           kategori_id_4: req.body.kategori_id_4,
           kategori_id_5: req.body.kategori_id_5,
           deskripsi: req.body.deskripsi,
+          status: req.body.status,
           foto_produk_1: foto_produk_1.secure_url,
           foto_produk_2: foto_produk_2.secure_url,
         })
         res.status(200).json({
           message: 'Successfully create product'
         })
-      } else if (req.files.foto_produk_1 ) {
+      } else if (req.files.foto_produk_1) {
         const foto_produk_1 = await cloudinary.uploader.upload(req.files.foto_produk_1[0].path);
         await Product.create({
           nama: req.body.nama,
@@ -61,15 +69,15 @@ class ProductController {
           kategori_id_4: req.body.kategori_id_4,
           kategori_id_5: req.body.kategori_id_5,
           deskripsi: req.body.deskripsi,
+          status: req.body.status,
           foto_produk_1: foto_produk_1.secure_url,
         })
         res.status(200).json({
           message: 'Successfully create product'
         })
-      }
-      else {
+      } else {
         res.status(400).json({
-          message:'Foto Produk Minimal 1'
+          message: 'Foto Produk Minimal 1'
         })
       }
     } catch (err) {
@@ -79,25 +87,127 @@ class ProductController {
 
   static async list(req, res, next) {
     try {
+      if (!req.headers.authorization) {
+        const pageAsNumber = Number.parseInt(req.query.page)
+        const sizeAsNumber = Number.parseInt(req.query.size)
+        let page = 0;
+        let size = 5;
+        if (!Number.isNaN(pageAsNumber) && pageAsNumber > 0) {
+          page = pageAsNumber;
+        }
+        if (!Number.isNaN(sizeAsNumber) && sizeAsNumber > 0) {
+          size = sizeAsNumber;
+        }
+        const product = await Product.findAndCountAll({
+          where: {
+            [Op.or]: [{
+              kategori_id_1: req.query.id
+            }, {
+              kategori_id_2: req.query.id
+            }, {
+              kategori_id_3: req.query.id
+            }, {
+              kategori_id_4: req.query.id
+            }, {
+              kategori_id_5: req.query.id
+            }]
+          },
+          include: [{
+              model: Category,
+              as: 'kategori_1'
+            },
+            {
+              model: Category,
+              as: 'kategori_2'
+            },
+            {
+              model: Category,
+              as: 'kategori_3'
+            },
+            {
+              model: Category,
+              as: 'kategori_4'
+            },
+            {
+              model: Category,
+              as: 'kategori_5'
+            }
+          ],
+          limit: size,
+          offset: page * size
+        })
+        res.status(200).json({
+          content: product.rows,
+          totalPages: Math.ceil(product.count / size)
+        })
+      } else {
+        const payload = jwt.verify(req.headers.authorization, process.env.JWT_SECRET)
+        const user = await User.findOne({
+          where: {
+            id: payload.id,
+            email: payload.email
+          }
+        })
+        if (user) {
+          req.user = payload
           const pageAsNumber = Number.parseInt(req.query.page)
           const sizeAsNumber = Number.parseInt(req.query.size)
           let page = 0;
           let size = 5;
-      if (!Number.isNaN(pageAsNumber) && pageAsNumber > 0) {
-        page = pageAsNumber;
-      }
-      if (!Number.isNaN(sizeAsNumber) && sizeAsNumber > 0) {
-        size = sizeAsNumber;
-      }
-      const product = await Product.findAndCountAll({
-        limit: size,
-        offset: page * size
-      })
+          if (!Number.isNaN(pageAsNumber) && pageAsNumber > 0) {
+            page = pageAsNumber;
+          }
+          if (!Number.isNaN(sizeAsNumber) && sizeAsNumber > 0) {
+            size = sizeAsNumber;
+          }
+          const product = await Product.findAndCountAll({
+            where: {
+              [Op.not]: [{
+                user_id: req.user.id
+              }],
+              [Op.or]: [{
+                kategori_id_1: req.query.id
+              }, {
+                kategori_id_2: req.query.id
+              }, {
+                kategori_id_3: req.query.id
+              }, {
+                kategori_id_4: req.query.id
+              }, {
+                kategori_id_5: req.query.id
+              }]
+            },
+            include: [{
+                model: Category,
+                as: 'kategori_1'
+              },
+              {
+                model: Category,
+                as: 'kategori_2'
+              },
+              {
+                model: Category,
+                as: 'kategori_3'
+              },
+              {
+                model: Category,
+                as: 'kategori_4'
+              },
+              {
+                model: Category,
+                as: 'kategori_5'
+              }
+            ],
+            limit: size,
+            offset: page * size
+          })
 
-      res.status(200).json({
-        content: product.rows,
-        totalPages : Math.ceil(product.count/size)
-      })
+          res.status(200).json({
+            content: product.rows,
+            totalPages: Math.ceil(product.count / size)
+          })
+        }
+      }
     } catch (err) {
       next(err)
     }
@@ -108,7 +218,28 @@ class ProductController {
       const product = await Product.findAll({
         where: {
           user_id: req.user.id
-        }
+        },
+        include: [{
+            model: Category,
+            as: 'kategori_1'
+          },
+          {
+            model: Category,
+            as: 'kategori_2'
+          },
+          {
+            model: Category,
+            as: 'kategori_3'
+          },
+          {
+            model: Category,
+            as: 'kategori_4'
+          },
+          {
+            model: Category,
+            as: 'kategori_5'
+          }
+        ],
       })
       res.status(200).json(product)
     } catch (err) {
@@ -177,6 +308,109 @@ class ProductController {
           })
           res.status(200).json({
             message: 'Product has been SOLD!'
+          })
+        }
+      }
+    } catch (err) {
+      next(err)
+    }
+  }
+  static async listAll(req, res, next) {
+    try {
+      if (!req.headers.authorization) {
+        const pageAsNumber = Number.parseInt(req.query.page)
+        const sizeAsNumber = Number.parseInt(req.query.size)
+        let page = 0;
+        let size = 5;
+        if (!Number.isNaN(pageAsNumber) && pageAsNumber > 0) {
+          page = pageAsNumber;
+        }
+        if (!Number.isNaN(sizeAsNumber) && sizeAsNumber > 0) {
+          size = sizeAsNumber;
+        }
+        const product = await Product.findAndCountAll({
+          include: [{
+              model: Category,
+              as: 'kategori_1'
+            },
+            {
+              model: Category,
+              as: 'kategori_2'
+            },
+            {
+              model: Category,
+              as: 'kategori_3'
+            },
+            {
+              model: Category,
+              as: 'kategori_4'
+            },
+            {
+              model: Category,
+              as: 'kategori_5'
+            }
+          ],
+          limit: size,
+          offset: page * size
+        })
+        res.status(200).json({
+          content: product.rows,
+          totalPages: Math.ceil(product.count / size)
+        })
+      } else {
+        const payload = jwt.verify(req.headers.authorization, process.env.JWT_SECRET)
+        const user = await User.findOne({
+          where: {
+            id: payload.id,
+            email: payload.email
+          }
+        })
+        if (user) {
+          req.user = payload
+          const pageAsNumber = Number.parseInt(req.query.page)
+          const sizeAsNumber = Number.parseInt(req.query.size)
+          let page = 0;
+          let size = 5;
+          if (!Number.isNaN(pageAsNumber) && pageAsNumber > 0) {
+            page = pageAsNumber;
+          }
+          if (!Number.isNaN(sizeAsNumber) && sizeAsNumber > 0) {
+            size = sizeAsNumber;
+          }
+          const product = await Product.findAndCountAll({
+            where: {
+              [Op.not]: [{
+                user_id: req.user.id
+              }]
+            },
+            include: [{
+                model: Category,
+                as: 'kategori_1'
+              },
+              {
+                model: Category,
+                as: 'kategori_2'
+              },
+              {
+                model: Category,
+                as: 'kategori_3'
+              },
+              {
+                model: Category,
+                as: 'kategori_4'
+              },
+              {
+                model: Category,
+                as: 'kategori_5'
+              }
+            ],
+            limit: size,
+            offset: page * size
+          })
+
+          res.status(200).json({
+            content: product.rows,
+            totalPages: Math.ceil(product.count / size)
           })
         }
       }

@@ -11,7 +11,38 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Product.belongsTo(models.User, {through: 'user', foreignKey: 'user_id'})
+      Product.belongsTo(models.User, {
+        foreignKey: 'user_id',
+        as: 'user'
+      })
+      Product.hasMany(models.Penawaran, {
+        foreignKey: 'produk_id',
+        as: 'product'
+      })
+      Product.belongsTo(models.Category, {
+        through: 'kategori_1',
+        foreignKey: 'kategori_id_1'
+      })
+      Product.belongsTo(models.Category, {
+        foreignKey: 'kategori_id_1',
+        as: 'kategori_1',
+      })
+      Product.belongsTo(models.Category, {
+        foreignKey: 'kategori_id_2',
+        as: 'kategori_2',
+      })
+      Product.belongsTo(models.Category, {
+        foreignKey: 'kategori_id_3',
+        as: 'kategori_3',
+      })
+      Product.belongsTo(models.Category, {
+        foreignKey: 'kategori_id_4',
+        as: 'kategori_4',
+      })
+      Product.belongsTo(models.Category, {
+        foreignKey: 'kategori_id_5',
+        as: 'kategori_5',
+      })
     }
   }
   Product.init({
@@ -27,10 +58,10 @@ module.exports = (sequelize, DataTypes) => {
     foto_produk_1: DataTypes.STRING,
     foto_produk_2: DataTypes.STRING,
     foto_produk_3: DataTypes.STRING,
-    status:    {
-      type : DataTypes.ENUM,
-      values: ['dijual','diterima','ditolak',  'menunggu'],
-      defaultValue: 'dijual'
+    status: {
+      type: DataTypes.ENUM,
+      values: ['terbit', 'preview', 'terjual'],
+      defaultValue: 'terbit'
     }
   }, {
     sequelize,

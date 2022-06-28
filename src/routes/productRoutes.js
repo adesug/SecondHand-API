@@ -27,7 +27,7 @@ const upload = multer({
 })
 
 
-router.post('/create', authentication,  upload.fields([{
+router.post('/create', authentication, upload.fields([{
   name: 'foto_produk_1',
   maxCount: 1
 }, {
@@ -44,6 +44,6 @@ router.get('/list',
 router.get('/list-by-id', authentication, ProductController.listId)
 router.delete('/deleteByUser/:id', authentication, ProductController.deleteByUser)
 router.delete('/delete-after-sold/:id', authentication, ProductController.deleteAfterSold)
-
+router.get('/all',ProductController.listAll)
 
 module.exports = router
