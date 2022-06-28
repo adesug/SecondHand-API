@@ -44,11 +44,10 @@ router.get('/list',
   ProductController.list)
 router.get('/list-by-id', authentication, ProductController.listId)
 router.delete('/deleteByUser/:id', authentication, ProductController.deleteByUser)
-router.delete('/delete-after-sold/:id', authentication, ProductController.deleteAfterSold)
+
 router.get('/all',ProductController.listAll)
 router.put('/update/:id', authentication, ProductController.updateProduk)
-router.get('/filter', ProductController.FilterByProductName);
-router.get('/filterByCategory', ProductController.FilterByCategory);
+
 
 
 module.exports = router

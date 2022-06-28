@@ -9,7 +9,7 @@ const {
 } = require('sequelize')
 const jwt = require('jsonwebtoken')
 const cloudinary = require('../config/cloudinary.service')
-const {Op} = require("sequelize");
+
 
 
 class ProductController {
