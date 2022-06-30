@@ -18,19 +18,20 @@ module.exports = (sequelize, DataTypes) => {
       Penawaran.belongsTo(models.Product, {
         foreignKey: 'produk_id',
         as: 'produk'
-        
+
       })
     }
   }
   Penawaran.init({
     produk_id: DataTypes.INTEGER,
     user_id_buyer: DataTypes.INTEGER,
+    user_id_seller: DataTypes.INTEGER,
     harga_penawaran: DataTypes.INTEGER,
-     status: {
-       type: DataTypes.ENUM,
-       values: ['ditawar', 'diterima', 'ditolak'],
-       defaultValue: 'ditawar'
-     }
+    status: {
+      type: DataTypes.ENUM,
+      values: ['ditawar', 'diterima', 'ditolak'],
+      defaultValue: 'ditawar'
+    }
   }, {
     sequelize,
     modelName: 'Penawaran',

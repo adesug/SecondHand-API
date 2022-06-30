@@ -14,11 +14,15 @@ module.exports = {
       user_id_buyer: {
         type: Sequelize.INTEGER
       },
+      user_id_seller: {
+        type: Sequelize.INTEGER
+      },
       harga_penawaran: {
         type: Sequelize.INTEGER
       },
       status: {
-        type: Sequelize.ENUM('ditawar', 'diterima', 'ditolak'), defaultValue: 'ditawar',
+        type: Sequelize.ENUM('ditawar', 'diterima', 'ditolak'),
+        defaultValue: 'ditawar',
         //ditawar sama dengan menunggu
       },
       createdAt: {

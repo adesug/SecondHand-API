@@ -2,7 +2,8 @@ const {
   Product,
   Category,
   User,
- sequelize
+  sequelize,
+  Notification
 } = require('../models')
 const {
   Op
@@ -61,7 +62,7 @@ class ProductController {
         })
       } else if (req.files.foto_produk_1) {
         const foto_produk_1 = await cloudinary.uploader.upload(req.files.foto_produk_1[0].path);
-        await Product.create({
+        const product = await Product.create({
           nama: req.body.nama,
           user_id: req.user.id,
           harga: req.body.harga,
@@ -74,9 +75,23 @@ class ProductController {
           status: req.body.status,
           foto_produk_1: foto_produk_1.secure_url,
         })
-        res.status(200).json({
-          message: 'Successfully create product'
-        })
+        let notif;
+        if (product.status === 'terbit') {
+          notif = await Notification.create({
+            produk_id: product.id,
+            user_id_seller: req.user.id,
+            status: 'terbit'
+          })
+          res.status(200).json({
+            message: 'Successfully create product',
+            notif
+          })
+        } else {
+          res.status(200).json({
+            message: 'Successfully create product in preview',
+          })
+        }
+
       } else {
         res.status(400).json({
           message: 'Foto Produk Minimal 1'
@@ -215,7 +230,7 @@ class ProductController {
     }
   }
 
-  static async listId(req, res, next) {
+  static async listIdUser(req, res, next) {
     try {
       const product = await Product.findAll({
         where: {
@@ -283,23 +298,23 @@ class ProductController {
       next(err)
     }
   }
-  static async updateProduk(req,res,next) {
+  static async updateProduk(req, res, next) {
     try {
       const produk = await Product.findOne({
         where: {
-          userId : req.user.id,
+          userId: req.user.id,
           id: req.params.id
         }
       })
-      if(!produk) {
+      if (!produk) {
         throw {
-          status : 404,
+          status: 404,
           message: 'Product is not found'
         }
-      }else {
+      } else {
         await Product.update(req.body, {
           where: {
-            userId : req.user.id,
+            userId: req.user.id,
             id: req.params.id
           }
         })
@@ -410,6 +425,40 @@ class ProductController {
           })
         }
       }
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  static async listIdProduct(req, res, next) {
+    try {
+      const product = await Product.findOne({
+        where: {
+          id: req.query.id
+        },
+        include: [{
+            model: Category,
+            as: 'kategori_1'
+          },
+          {
+            model: Category,
+            as: 'kategori_2'
+          },
+          {
+            model: Category,
+            as: 'kategori_3'
+          },
+          {
+            model: Category,
+            as: 'kategori_4'
+          },
+          {
+            model: Category,
+            as: 'kategori_5'
+          }
+        ],
+      })
+      res.status(200).json(product)
     } catch (err) {
       next(err)
     }
