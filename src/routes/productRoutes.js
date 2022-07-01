@@ -42,11 +42,12 @@ router.post('/create', authentication, upload.fields([{
 
 router.get('/list',
   ProductController.list)
-router.get('/list-by-id', authentication, ProductController.listId)
+router.get('/list-by-user', authentication, ProductController.listIdUser)
 router.delete('/deleteByUser/:id', authentication, ProductController.deleteByUser)
 
 router.get('/all',ProductController.listAll)
 router.put('/update/:id', authentication, ProductController.updateProduk)
+router.get('/list-by-id',ProductController.listIdProduct)
 
 
 
