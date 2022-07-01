@@ -20,7 +20,12 @@ module.exports = (sequelize, DataTypes) => {
     status: {
       type: DataTypes.ENUM,
       values: ['terbit', 'penawaran']
-    }
+    },
+    status_baca: {
+      type: DataTypes.ENUM,
+      values: ['unread','read'],
+      defaultValue: 'unread'
+    },
   }, {
     sequelize,
     modelName: 'Notification',

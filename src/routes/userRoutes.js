@@ -3,6 +3,9 @@ const router = express.Router()
 const UserController = require('../controllers/userControllers')
 const multer = require('multer')
 const storage = require('../helpers/multerStorage.helper')
+const {
+    authentication
+  } = require('../helpers/authMiddlewares.helper')
 
 const fs = require('fs');
 const upload = multer({
@@ -19,6 +22,6 @@ const upload = multer({
     }
 })
 
-router.put('/update/:id',upload.single('foto_profil'),UserController.update)
+router.put('/update/:id',upload.single('foto_profil'),authentication,UserController.update)
 
 module.exports = router

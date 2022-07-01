@@ -1,28 +1,18 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Notifications', {
+    await queryInterface.createTable('Wishlists', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      user_id: {
+        type: Sequelize.INTEGER
+      },
       produk_id: {
         type: Sequelize.INTEGER
-      },
-      user_id_buyer: {
-        type: Sequelize.INTEGER
-      },
-      user_id_seller: {
-        type: Sequelize.INTEGER
-      },
-      status: {
-        type: Sequelize.ENUM('terbit', 'penawaran')
-      },
-      status_baca: {
-        type: Sequelize.ENUM('unread','read'),
-        defaultValue: 'unread',
       },
       createdAt: {
         allowNull: false,
@@ -35,6 +25,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Notifications');
+    await queryInterface.dropTable('Wishlists');
   }
 };

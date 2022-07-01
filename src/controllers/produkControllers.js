@@ -2,7 +2,6 @@ const {
   Product,
   Category,
   User,
- sequelize
 } = require('../models')
 const {
   Op

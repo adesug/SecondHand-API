@@ -4,7 +4,7 @@ const cloudinary = require('../config/cloudinary.service')
 class UpdateUserController {
     static async update(req,res,next) {
         try {
-            const {id} = req.params;
+            // const {id} = req.params;
             const foto_profil = await cloudinary.uploader.upload(req.file.path);
             const {body} = req;
             let newData = {
@@ -14,7 +14,7 @@ class UpdateUserController {
             console.log(newData);
             let findUser = await User.findOne({
                 where : {
-                    id,
+                    id : req.user.id
                 }
             })
             if(findUser == null) {
@@ -25,7 +25,7 @@ class UpdateUserController {
             }else {
              await User.update(newData,{
                     where : {
-                        id,
+                        id : req.user.id
                     }
                 })
                 const resObject = {...findUser.dataValues, ...body}
