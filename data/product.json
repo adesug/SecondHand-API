@@ -1,309 +1,552 @@
-[
-    {
-        "nama" : "Jam Tangan",
-        "user_id" : "1",
-        "harga" : "100000",
-        "kategori_id_1" : 1,
-        "kategori_id_2" : 2,
-        "kategori_id_3" : null,
-        "kategori_id_4" : null,
-        "kategori_id_5" : null,
-        "deskripsi" : "Jam tangan pria",
-        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-        
+[{
+        "nama": "Mazda",
+        "user_id": 5,
+        "harga": "227754",
+        "kategori_id_1": 5,
+        "kategori_id_2": 4,
+        "deskripsi": "amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
     },
     {
-        "nama" : "Motor",
-        "user_id" : "1",
-        "harga" : "100000",
-        "kategori_id_1" : 2,
-        "kategori_id_2" : null,
-        "kategori_id_3" : null,
-        "kategori_id_4" : null,
-        "kategori_id_5" : null,
-        "deskripsi" : "Motor anyar ges",
-        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-        
+        "nama": "Buick",
+        "user_id": 1,
+        "harga": "389769",
+        "kategori_id_1": 2,
+        "kategori_id_2": 4,
+        "deskripsi": "magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
     },
     {
-        "nama" : "Baju koko",
-        "user_id" : "1",
-        "harga" : "5000",
-        "kategori_id_1" : 3,
-        "kategori_id_2" : null,
-        "kategori_id_3" : null,
-        "kategori_id_4" : null,
-        "kategori_id_5" : null,
-        "deskripsi" : "Baju baru ges",
-        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-        
+        "nama": "GMC",
+        "user_id": 2,
+        "harga": "266523",
+        "kategori_id_1": 5,
+        "kategori_id_2": 1,
+        "deskripsi": "nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
     },
     {
-        "nama" : "Tas Eiger",
-        "user_id" : "1",
-        "harga" : "450000",
-        "kategori_id_1" : 3,
-        "kategori_id_2" : null,
-        "kategori_id_3" : null,
-        "kategori_id_4" : null,
-        "kategori_id_5" : null,
-        "deskripsi" : "Tas baru",
-        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-        
+        "nama": "Mercury",
+        "user_id": 4,
+        "harga": "854014",
+        "kategori_id_1": 1,
+        "kategori_id_2": 2,
+        "deskripsi": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
     },
     {
-        "nama" : "Baju Bola",
-        "user_id" : "1",
-        "harga" : "45000",
-        "kategori_id_1" : 1,
-        "kategori_id_2" : null,
-        "kategori_id_3" : null,
-        "kategori_id_4" : null,
-        "kategori_id_5" : null,
-        "deskripsi" : "Baju baru",
-        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-        
+        "nama": "Isuzu",
+        "user_id": 4,
+        "harga": "338962",
+        "kategori_id_1": 5,
+        "kategori_id_2": 3,
+        "deskripsi": "vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
     },
     {
-        "nama" : "Masker Duckbil",
-        "user_id" : "1",
-        "harga" : "10000",
-        "kategori_id_1" : 5,
-        "kategori_id_2" : null,
-        "kategori_id_3" : null,
-        "kategori_id_4" : null,
-        "kategori_id_5" : null,
-        "deskripsi" : "Masker baru",
-        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-        
+        "nama": "Hyundai",
+        "user_id": 1,
+        "harga": "677779",
+        "kategori_id_1": 1,
+        "kategori_id_2": 4,
+        "deskripsi": "lectus suspendisse potenti in eleifend quam a odio in hac habitasse",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Ford",
+        "user_id": 2,
+        "harga": "961703",
+        "kategori_id_1": 3,
+        "kategori_id_2": 1,
+        "deskripsi": "nam dui proin leo odio porttitor id consequat in consequat",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Pontiac",
+        "user_id": 3,
+        "harga": "85056",
+        "kategori_id_1": 2,
+        "kategori_id_2": 2,
+        "deskripsi": "pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Chevrolet",
+        "user_id": 4,
+        "harga": "765381",
+        "kategori_id_1": 2,
+        "kategori_id_2": 5,
+        "deskripsi": "auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc",
+        "status": "terbit",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Toyota",
+        "user_id": 6,
+        "harga": "348140",
+        "kategori_id_1": 2,
+        "kategori_id_2": 4,
+        "deskripsi": "justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in",
+        "status": "terbit",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Hyundai",
+        "user_id": 5,
+        "harga": "689158",
+        "kategori_id_1": 3,
+        "kategori_id_2": 2,
+        "deskripsi": "arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Mercedes-Benz",
+        "user_id": 4,
+        "harga": "844369",
+        "kategori_id_1": 2,
+        "kategori_id_2": 5,
+        "deskripsi": "libero nam dui proin leo odio porttitor id consequat in consequat ut",
+        "status": "terbit",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Chevrolet",
+        "user_id": 5,
+        "harga": "747074",
+        "kategori_id_1": 2,
+        "kategori_id_2": 3,
+        "deskripsi": "duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel",
+        "status": "terbit",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Ford",
+        "user_id": 5,
+        "harga": "939334",
+        "kategori_id_1": 1,
+        "kategori_id_2": 3,
+        "deskripsi": "fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui",
+        "status": "terbit",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Audi",
+        "user_id": 2,
+        "harga": "788291",
+        "kategori_id_1": 4,
+        "kategori_id_2": 4,
+        "deskripsi": "mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "GMC",
+        "user_id": 3,
+        "harga": "988257",
+        "kategori_id_1": 3,
+        "kategori_id_2": 1,
+        "deskripsi": "curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin",
+        "status": "terbit",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Dodge",
+        "user_id": 3,
+        "harga": "80926",
+        "kategori_id_1": 4,
+        "kategori_id_2": 5,
+        "deskripsi": "lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Mercedes-Benz",
+        "user_id": 2,
+        "harga": "822716",
+        "kategori_id_1": 3,
+        "kategori_id_2": 5,
+        "deskripsi": "nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Pontiac",
+        "user_id": 6,
+        "harga": "367579",
+        "kategori_id_1": 2,
+        "kategori_id_2": 1,
+        "deskripsi": "eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Maybach",
+        "user_id": 5,
+        "harga": "937079",
+        "kategori_id_1": 2,
+        "kategori_id_2": 3,
+        "deskripsi": "in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices",
+        "status": "terbit",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Chevrolet",
+        "user_id": 3,
+        "harga": "594990",
+        "kategori_id_1": 1,
+        "kategori_id_2": 3,
+        "deskripsi": "vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Lincoln",
+        "user_id": 2,
+        "harga": "641095",
+        "kategori_id_1": 4,
+        "kategori_id_2": 2,
+        "deskripsi": "sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac",
+        "status": "terbit",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Pontiac",
+        "user_id": 3,
+        "harga": "517812",
+        "kategori_id_1": 2,
+        "kategori_id_2": 4,
+        "deskripsi": "ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Dodge",
+        "user_id": 3,
+        "harga": "573978",
+        "kategori_id_1": 4,
+        "kategori_id_2": 2,
+        "deskripsi": "vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Mazda",
+        "user_id": 1,
+        "harga": "426013",
+        "kategori_id_1": 1,
+        "kategori_id_2": 2,
+        "deskripsi": "proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Mazda",
+        "user_id": 5,
+        "harga": "154832",
+        "kategori_id_1": 5,
+        "kategori_id_2": 3,
+        "deskripsi": "mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue",
+        "status": "terbit",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Mazda",
+        "user_id": 6,
+        "harga": "37310",
+        "kategori_id_1": 2,
+        "kategori_id_2": 3,
+        "deskripsi": "dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Chrysler",
+        "user_id": 1,
+        "harga": "546722",
+        "kategori_id_1": 1,
+        "kategori_id_2": 1,
+        "deskripsi": "ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Daewoo",
+        "user_id": 4,
+        "harga": "428016",
+        "kategori_id_1": 2,
+        "kategori_id_2": 2,
+        "deskripsi": "vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "BMW",
+        "user_id": 5,
+        "harga": "228167",
+        "kategori_id_1": 1,
+        "kategori_id_2": 1,
+        "deskripsi": "nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem",
+        "status": "terbit",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Audi",
+        "user_id": 5,
+        "harga": "989787",
+        "kategori_id_1": 5,
+        "kategori_id_2": 5,
+        "deskripsi": "nam dui proin leo odio porttitor id consequat in consequat ut",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "BMW",
+        "user_id": 5,
+        "harga": "107304",
+        "kategori_id_1": 5,
+        "kategori_id_2": 1,
+        "deskripsi": "orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Oldsmobile",
+        "user_id": 1,
+        "harga": "514654",
+        "kategori_id_1": 2,
+        "kategori_id_2": 4,
+        "deskripsi": "lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Mitsubishi",
+        "user_id": 1,
+        "harga": "43358",
+        "kategori_id_1": 3,
+        "kategori_id_2": 1,
+        "deskripsi": "elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Honda",
+        "user_id": 3,
+        "harga": "475429",
+        "kategori_id_1": 3,
+        "kategori_id_2": 1,
+        "deskripsi": "aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Dodge",
+        "user_id": 1,
+        "harga": "920182",
+        "kategori_id_1": 4,
+        "kategori_id_2": 3,
+        "deskripsi": "molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "BMW",
+        "user_id": 4,
+        "harga": "237047",
+        "kategori_id_1": 3,
+        "kategori_id_2": 3,
+        "deskripsi": "in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Mitsubishi",
+        "user_id": 4,
+        "harga": "698263",
+        "kategori_id_1": 5,
+        "kategori_id_2": 3,
+        "deskripsi": "in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Volvo",
+        "user_id": 6,
+        "harga": "834354",
+        "kategori_id_1": 1,
+        "kategori_id_2": 4,
+        "deskripsi": "porta volutpat quam pede lobortis ligula sit amet eleifend pede",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Nissan",
+        "user_id": 3,
+        "harga": "477609",
+        "kategori_id_1": 5,
+        "kategori_id_2": 5,
+        "deskripsi": "commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "GMC",
+        "user_id": 5,
+        "harga": "235947",
+        "kategori_id_1": 4,
+        "kategori_id_2": 3,
+        "deskripsi": "in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Mazda",
+        "user_id": 1,
+        "harga": "102429",
+        "kategori_id_1": 2,
+        "kategori_id_2": 2,
+        "deskripsi": "commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Buick",
+        "user_id": 1,
+        "harga": "317035",
+        "kategori_id_1": 2,
+        "kategori_id_2": 3,
+        "deskripsi": "maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet",
+        "status": "preview",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Toyota",
+        "user_id": 1,
+        "harga": "180263",
+        "kategori_id_1": 4,
+        "kategori_id_2": 5,
+        "deskripsi": "integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Lexus",
+        "user_id": 2,
+        "harga": "518913",
+        "kategori_id_1": 4,
+        "kategori_id_2": 3,
+        "deskripsi": "praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Ford",
+        "user_id": 1,
+        "harga": "661206",
+        "kategori_id_1": 4,
+        "kategori_id_2": 4,
+        "deskripsi": "aenean sit amet justo morbi ut odio cras mi pede malesuada",
+        "status": "terbit",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Saturn",
+        "user_id": 5,
+        "harga": "763436",
+        "kategori_id_1": 3,
+        "kategori_id_2": 1,
+        "deskripsi": "tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    },
+    {
+        "nama": "Nissan",
+        "user_id": 5,
+        "harga": "469304",
+        "kategori_id_1": 1,
+        "kategori_id_2": 3,
+        "deskripsi": "penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis",
+        "status": "preview",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Impala",
+        "user_id": 4,
+        "harga": "278971",
+        "kategori_id_1": 3,
+        "kategori_id_2": 2,
+        "deskripsi": "velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit",
+        "status": "terbit",
+        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+    },
+    {
+        "nama": "Camry",
+        "user_id": 3,
+        "harga": "653740",
+        "kategori_id_1": 5,
+        "kategori_id_2": 2,
+        "kategori_id_3": 1,
+        "kategori_id_4": 3,
+        "deskripsi": "in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_2": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_3": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_4": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_5": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    }, {
+        "nama": "Mercedes",
+        "user_id": 3,
+        "harga": "653740",
+        "kategori_id_1": 5,
+        "kategori_id_2": 2,
+        "kategori_id_3": 1,
+        "kategori_id_4": 3,
+        "deskripsi": "in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_2": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_3": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_4": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_5": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    }, {
+        "nama": "GTR",
+        "user_id": 3,
+        "harga": "653740",
+        "kategori_id_1": 5,
+        "kategori_id_2": 2,
+        "kategori_id_3": 1,
+        "kategori_id_4": 3,
+        "deskripsi": "in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_2": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_3": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_4": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_5": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+    }, {
+        "nama": "Nissan",
+        "user_id": 3,
+        "harga": "653740",
+        "kategori_id_1": 5,
+        "kategori_id_2": 2,
+        "kategori_id_3": 1,
+        "kategori_id_4": 3,
+        "deskripsi": "in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna",
+        "status": "terbit",
+        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_2": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_3": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_4": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+        "foto_produk_5": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
     }
-    ,
-    {
-        "nama" : "Radio",
-        "user_id" : "1",
-        "harga" : "300000",
-        "kategori_id_1" : 4,
-        "kategori_id_2" : null,
-        "kategori_id_3" : null,
-        "kategori_id_4" : null,
-        "kategori_id_5" : null,
-        "deskripsi" : "Radio mberr",
-        "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-        "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-        
-    },
-    {
-        
-            "nama" : "Minyak GPU",
-            "user_id" : "1",
-            "harga" : "10000",
-            "kategori_id_1" : 5,
-            "kategori_id_2" : null,
-            "kategori_id_3" : null,
-            "kategori_id_4" : null,
-            "kategori_id_5" : null,
-            "deskripsi" : "Minyak gosok pijat urut",
-            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-            
-        },
-        {
-            
-                "nama" : "Laptop Asus Vivobook",
-                "user_id" : "1",
-                "harga" : "6000000",
-                "kategori_id_1" : 4,
-                "kategori_id_2" : null,
-                "kategori_id_3" : null,
-                "kategori_id_4" : null,
-                "kategori_id_5" : null,
-                "deskripsi" : "Laptop bekas garansi",
-                "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-                "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-                "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-                
-        },
-        {  
-                "nama" : "Helm",
-                "user_id" : "1",
-                "harga" : "100000",
-                "kategori_id_1" : 2,
-                "kategori_id_2" : null,
-                "kategori_id_3" : null,
-                "kategori_id_4" : null,
-                "kategori_id_5" : null,
-                "deskripsi" : "Masker baru",
-                "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-                "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-                "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-                
-                
-        },
-        {
-            "nama" : "Mobil Toyota Rush",
-            "user_id" : "1",
-            "harga" : "3000000",
-            "kategori_id_1" : 2,
-            "kategori_id_2" : null,
-            "kategori_id_3" : null,
-            "kategori_id_4" : null,
-            "kategori_id_5" : null,
-            "deskripsi" : "Tahun 2020",
-            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-            
-        },
-        {
-            "nama" : "Kemeja",
-            "user_id" : 1,
-            "harga" : "30000",
-            "kategori_id_1" : 3,
-            "kategori_id_2" : null,
-            "kategori_id_3" : null,
-            "kategori_id_4" : null,
-            "kategori_id_5" : null,
-            "deskripsi" : "Baju Baru",
-            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-            
-        },
-        {
-            "nama" : "Sun screen",
-            "user_id" : "1",
-            "harga" : "45000",
-            "kategori_id_1" : 5,
-            "kategori_id_2" : null,
-            "kategori_id_3" : null,
-            "kategori_id_4" : null,
-            "kategori_id_5" : null,
-            "deskripsi" : "Produk original",
-            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-            
-        },
-        {
-            "nama" : "Monitor LG 22 INC",
-            "user_id" : "1",
-            "harga" : "3000000",
-            "kategori_id_1" : 4,
-            "kategori_id_2" : null,
-            "kategori_id_3" : null,
-            "kategori_id_4" : null,
-            "kategori_id_5" : null,
-            "deskripsi" : "Barang baru",
-            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-            
-        },
-        {
-            "nama" : "Raket yonex",
-            "user_id" : "1",
-            "harga" : "300000",
-            "kategori_id_1" : 1,
-            "kategori_id_2" : 5,
-            "kategori_id_3" : null,
-            "kategori_id_4" : null,
-            "kategori_id_5" : null,
-            "deskripsi" : "isi 2",
-            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-           
-        },
-        {
-            "nama" : "Sepatu running",
-            "user_id" : "1",
-            "harga" : "200000",
-            "kategori_id_1" : 5,
-            "kategori_id_2" : 1,
-            "kategori_id_3" : null,
-            "kategori_id_4" : null,
-            "kategori_id_5" : null,
-            "deskripsi" : "Tahun 2020",
-            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-            
-        },
-        {
-            "nama" : "Celana bahan hitam",
-            "user_id" : "1",
-            "harga" : "100000",
-            "kategori_id_1" : 3,
-            "kategori_id_2" : null,
-            "kategori_id_3" : null,
-            "kategori_id_4" : null,
-            "kategori_id_5" : null,
-            "deskripsi" : "Ukuran 32",
-            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-            
-        },
-        {
-            "nama" : "Sandal Eiger",
-            "user_id" : "1",
-            "harga" : "100000",
-            "kategori_id_1" : 3,
-            "kategori_id_2" : null,
-            "kategori_id_3" : null,
-            "kategori_id_4" : null,
-            "kategori_id_5" : null,
-            "deskripsi" : "Ukuran 43",
-            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-            
-        },
-        {
-            "nama" : "Sepeda Lipat",
-            "user_id" : "1",
-            "harga" : "1500000",
-            "kategori_id_1" : 2,
-            "kategori_id_2" : 1,
-            "kategori_id_3" : null,
-            "kategori_id_4" : null,
-            "kategori_id_5" : null,
-            "deskripsi" : "Bekas",
-            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-            
-        },
-        {
-            "nama" : "Barbel 5kg",
-            "user_id" : "1",
-            "harga" : "60000",
-            "kategori_id_1" : 1,
-            "kategori_id_2" : 5,
-            "kategori_id_3" : null,
-            "kategori_id_4" : null,
-            "kategori_id_5" : null,
-            "deskripsi" : "Berat 5KG bahan besi",
-            "foto_produk_1" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_2" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
-            "foto_produk_3" : "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg"
-            
-        }
-        
-    
-
 ]

@@ -16,7 +16,8 @@ module.exports = {
         deskripsi : element.deskripsi,
         foto_produk_1 : element.foto_produk_1,
         foto_produk_2 : element.foto_produk_2,
-        foto_produk_3 : element.foto_produk_3,
+        foto_produk_3: element.foto_produk_3,
+        status:element.status,
         createdAt: new Date(),
         updatedAt: new Date(),
       }
