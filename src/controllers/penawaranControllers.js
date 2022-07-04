@@ -12,7 +12,7 @@ class PenawaranController {
         try {
             let findProduct = await Product.findOne({
                 where: {
-                    id: req.body.produk_id,
+                    id: req.params.id,
                 },
                 include: [{
                     model: User,
@@ -27,7 +27,7 @@ class PenawaranController {
                 })
             } else {
                 await Penawaran.create({
-                    produk_id: req.body.produk_id,
+                    produk_id: req.params.id,
                     user_id_buyer: req.user.id,
                     harga_penawaran: req.body.harga_penawaran,
                     user_id_seller: findProduct.user_id,

@@ -67,7 +67,7 @@ module.exports = (sequelize, DataTypes) => {
     foto_produk_3: DataTypes.STRING,
     status: {
       type: DataTypes.ENUM,
-      values: ['terbit', 'preview', 'terjual'],
+      values: ['terbit','preview','terjual'],
       defaultValue: 'terbit'
     }
   }, {

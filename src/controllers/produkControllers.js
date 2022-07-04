@@ -2,11 +2,6 @@ const {
   Product,
   Category,
   User,
-<<<<<<< HEAD
-=======
-  sequelize,
-  Notification
->>>>>>> 9afdad103b110066ffca5e812ceb0b328acf12f3
 } = require('../models')
 const {
   Op
@@ -18,9 +13,18 @@ const cloudinary = require('../config/cloudinary.service')
 
 class ProductController {
   static async create(req, res, next) {
-    console.log(req.files)
+    
     try {
-      if (req.files.foto_produk_1 && req.files.foto_produk_2 && req.files.foto_produk_3) {
+      const user = await User.findOne({
+        where : {
+          id : req.user.id
+        }
+        
+      })
+      // console.log(user.nama);
+      if(user.foto_profil != null && user.kota !=null && user.alamat != null && user.telp != null)
+      {
+        if (req.files.foto_produk_1 && req.files.foto_produk_2 && req.files.foto_produk_3) {
         const foto_produk_1 = await cloudinary.uploader.upload(req.files.foto_produk_1[0].path);
         const foto_produk_2 = await cloudinary.uploader.upload(req.files.foto_produk_2[0].path);
         const foto_produk_3 = await cloudinary.uploader.upload(req.files.foto_produk_3[0].path);
@@ -100,6 +104,12 @@ class ProductController {
           message: 'Foto Produk Minimal 1'
         })
       }
+      }else {
+        res.status(404).json({
+          message: 'Lengkapi data diri !'
+        })
+      }
+      
     } catch (err) {
       next(err)
     }
