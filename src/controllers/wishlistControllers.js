@@ -16,7 +16,7 @@ class WishlistController {
                 })
             }
             await Wishlist.create({
-                user_id : req.body.user_id,
+                user_id : req.user.id,
                 produk_id : req.body.produk_id,
             })
             res.status(200).json({

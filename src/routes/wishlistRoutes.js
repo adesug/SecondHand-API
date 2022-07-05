@@ -5,7 +5,7 @@ const {
     authentication
   } = require('../helpers/authMiddlewares.helper')
  
-router.post('/create',WishlistController.create)
+router.post('/create', authentication, WishlistController.create)
 router.get('/list',authentication,WishlistController.list)
 router.delete('/delete/:id',authentication,WishlistController.delete)
 
