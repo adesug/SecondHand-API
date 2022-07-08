@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "postgres",
-    "password": "plugin",
+    "password": "dimasslalu123",
     "database": "secondhand",
     "host": "127.0.0.1",
     "dialect": "postgres"
@@ -14,15 +14,15 @@ module.exports = {
     "dialect": "mysql"
   },
 
-  "production": {
-  use_env_variable : 'DATABASE_URL',
-    dialect: "postgress",
-    protocol: "postgress",
-    dialectOptions: {
-      ssl : {
-        require : true,
-        rejectUnauthorized : false
-      }
-    }
-  }
+  // "production": {
+  // use_env_variable : 'DATABASE_URL',
+  //   dialect: "postgress",
+  //   protocol: "postgress",
+  //   dialectOptions: {
+  //     ssl : {
+  //       require : true,
+  //       rejectUnauthorized : false
+  //     }
+  //   }
+  // }
 };

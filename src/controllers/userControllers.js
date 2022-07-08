@@ -39,5 +39,25 @@ class UpdateUserController {
             next(err)
         } 
     } 
+
+    static async detail(req, res, next) {
+        try {
+            const user = await User.findOne({
+                where: {
+                    nama:req.params.nama
+                }
+            })
+            res.status(200).json({
+                nama: user.nama,
+                email: user.email,
+                foto_profil: user.foto_profil,
+                kota: user.kota,
+                alamat: user.alamat,
+                telp:user.telp
+            })
+        } catch (err) {
+            next(err)
+        }
+    }
 }
 module.exports = UpdateUserController

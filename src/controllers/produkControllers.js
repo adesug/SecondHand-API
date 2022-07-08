@@ -13,103 +13,102 @@ const cloudinary = require('../config/cloudinary.service')
 
 class ProductController {
   static async create(req, res, next) {
-    
+
     try {
       const user = await User.findOne({
-        where : {
-          id : req.user.id
+        where: {
+          id: req.user.id
         }
-        
+
       })
       // console.log(user.nama);
-      if(user.foto_profil != null && user.kota !=null && user.alamat != null && user.telp != null)
-      {
+      if (user.foto_profil != null && user.kota != null && user.alamat != null && user.telp != null) {
         if (req.files.foto_produk_1 && req.files.foto_produk_2 && req.files.foto_produk_3) {
-        const foto_produk_1 = await cloudinary.uploader.upload(req.files.foto_produk_1[0].path);
-        const foto_produk_2 = await cloudinary.uploader.upload(req.files.foto_produk_2[0].path);
-        const foto_produk_3 = await cloudinary.uploader.upload(req.files.foto_produk_3[0].path);
-        await Product.create({
-          nama: req.body.nama,
-          user_id: req.user.id,
-          harga: req.body.harga,
-          kategori_id_1: req.body.kategori_id_1,
-          kategori_id_2: req.body.kategori_id_2,
-          kategori_id_3: req.body.kategori_id_3,
-          kategori_id_4: req.body.kategori_id_4,
-          kategori_id_5: req.body.kategori_id_5,
-          deskripsi: req.body.deskripsi,
-          status: req.body.status,
-          foto_produk_1: foto_produk_1.secure_url,
-          foto_produk_2: foto_produk_2.secure_url,
-          foto_produk_3: foto_produk_3.secure_url,
-        })
-        res.status(200).json({
-          message: 'Successfully create product'
-        })
+          const foto_produk_1 = await cloudinary.uploader.upload(req.files.foto_produk_1[0].path);
+          const foto_produk_2 = await cloudinary.uploader.upload(req.files.foto_produk_2[0].path);
+          const foto_produk_3 = await cloudinary.uploader.upload(req.files.foto_produk_3[0].path);
+          await Product.create({
+            nama: req.body.nama,
+            user_id: req.user.id,
+            harga: req.body.harga,
+            kategori_id_1: req.body.kategori_id_1,
+            kategori_id_2: req.body.kategori_id_2,
+            kategori_id_3: req.body.kategori_id_3,
+            kategori_id_4: req.body.kategori_id_4,
+            kategori_id_5: req.body.kategori_id_5,
+            deskripsi: req.body.deskripsi,
+            status: req.body.status,
+            foto_produk_1: foto_produk_1.secure_url,
+            foto_produk_2: foto_produk_2.secure_url,
+            foto_produk_3: foto_produk_3.secure_url,
+          })
+          res.status(200).json({
+            message: 'Successfully create product'
+          })
 
-      } else if (req.files.foto_produk_1 && req.files.foto_produk_2) {
-        const foto_produk_1 = await cloudinary.uploader.upload(req.files.foto_produk_1[0].path);
-        const foto_produk_2 = await cloudinary.uploader.upload(req.files.foto_produk_2[0].path);
-        await Product.create({
-          nama: req.body.nama,
-          user_id: req.user.id,
-          harga: req.body.harga,
-          kategori_id_1: req.body.kategori_id_1,
-          kategori_id_2: req.body.kategori_id_2,
-          kategori_id_3: req.body.kategori_id_3,
-          kategori_id_4: req.body.kategori_id_4,
-          kategori_id_5: req.body.kategori_id_5,
-          deskripsi: req.body.deskripsi,
-          status: req.body.status,
-          foto_produk_1: foto_produk_1.secure_url,
-          foto_produk_2: foto_produk_2.secure_url,
-        })
-        res.status(200).json({
-          message: 'Successfully create product'
-        })
-      } else if (req.files.foto_produk_1) {
-        const foto_produk_1 = await cloudinary.uploader.upload(req.files.foto_produk_1[0].path);
-        const product = await Product.create({
-          nama: req.body.nama,
-          user_id: req.user.id,
-          harga: req.body.harga,
-          kategori_id_1: req.body.kategori_id_1,
-          kategori_id_2: req.body.kategori_id_2,
-          kategori_id_3: req.body.kategori_id_3,
-          kategori_id_4: req.body.kategori_id_4,
-          kategori_id_5: req.body.kategori_id_5,
-          deskripsi: req.body.deskripsi,
-          status: req.body.status,
-          foto_produk_1: foto_produk_1.secure_url,
-        })
-        let notif;
-        if (product.status === 'terbit') {
-          notif = await Notification.create({
-            produk_id: product.id,
-            user_id_seller: req.user.id,
-            status: 'terbit'
+        } else if (req.files.foto_produk_1 && req.files.foto_produk_2) {
+          const foto_produk_1 = await cloudinary.uploader.upload(req.files.foto_produk_1[0].path);
+          const foto_produk_2 = await cloudinary.uploader.upload(req.files.foto_produk_2[0].path);
+          await Product.create({
+            nama: req.body.nama,
+            user_id: req.user.id,
+            harga: req.body.harga,
+            kategori_id_1: req.body.kategori_id_1,
+            kategori_id_2: req.body.kategori_id_2,
+            kategori_id_3: req.body.kategori_id_3,
+            kategori_id_4: req.body.kategori_id_4,
+            kategori_id_5: req.body.kategori_id_5,
+            deskripsi: req.body.deskripsi,
+            status: req.body.status,
+            foto_produk_1: foto_produk_1.secure_url,
+            foto_produk_2: foto_produk_2.secure_url,
           })
           res.status(200).json({
-            message: 'Successfully create product',
-            notif
+            message: 'Successfully create product'
           })
+        } else if (req.files.foto_produk_1) {
+          const foto_produk_1 = await cloudinary.uploader.upload(req.files.foto_produk_1[0].path);
+          const product = await Product.create({
+            nama: req.body.nama,
+            user_id: req.user.id,
+            harga: req.body.harga,
+            kategori_id_1: req.body.kategori_id_1,
+            kategori_id_2: req.body.kategori_id_2,
+            kategori_id_3: req.body.kategori_id_3,
+            kategori_id_4: req.body.kategori_id_4,
+            kategori_id_5: req.body.kategori_id_5,
+            deskripsi: req.body.deskripsi,
+            status: req.body.status,
+            foto_produk_1: foto_produk_1.secure_url,
+          })
+          let notif;
+          if (product.status === 'terbit') {
+            notif = await Notification.create({
+              produk_id: product.id,
+              user_id_seller: req.user.id,
+              status: 'terbit'
+            })
+            res.status(200).json({
+              message: 'Successfully create product',
+              notif
+            })
+          } else {
+            res.status(200).json({
+              message: 'Successfully create product in preview',
+            })
+          }
+
         } else {
-          res.status(200).json({
-            message: 'Successfully create product in preview',
+          res.status(400).json({
+            message: 'Foto Produk Minimal 1'
           })
         }
-
       } else {
-        res.status(400).json({
-          message: 'Foto Produk Minimal 1'
-        })
-      }
-      }else {
         res.status(404).json({
           message: 'Lengkapi data diri !'
         })
       }
-      
+
     } catch (err) {
       next(err)
     }
@@ -315,7 +314,7 @@ class ProductController {
     try {
       const produk = await Product.findOne({
         where: {
-          userId: req.user.id,
+          user_id: req.user.id,
           id: req.params.id
         }
       })
@@ -325,9 +324,11 @@ class ProductController {
           message: 'Product is not found'
         }
       } else {
-        await Product.update(req.body, {
+        await Product.update({
+          status: req.body.status
+        }, {
           where: {
-            userId: req.user.id,
+            user_id: req.user.id,
             id: req.params.id
           }
         })
@@ -476,6 +477,44 @@ class ProductController {
       next(err)
     }
   }
+
+  static async getTerjual(req, res, next) {
+    try {
+      const product = await Product.findAll({
+        where: {
+          status: 'terjual',
+          user_id: req.user.id
+        },
+        include: [{
+            model: Category,
+            as: 'kategori_1'
+          },
+          {
+            model: Category,
+            as: 'kategori_2'
+          },
+          {
+            model: Category,
+            as: 'kategori_3'
+          },
+          {
+            model: Category,
+            as: 'kategori_4'
+          },
+          {
+            model: Category,
+            as: 'kategori_5'
+          }
+        ]
+      })
+      res.status(200).json({
+        product
+      })
+    } catch (err) {
+      next(err)
+    }
+  }
+
 }
 
 module.exports = ProductController
