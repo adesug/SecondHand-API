@@ -2,6 +2,7 @@ const {
   Product,
   Category,
   User,
+  Notification
 } = require('../models')
 const {
   Op

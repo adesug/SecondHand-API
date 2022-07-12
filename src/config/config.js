@@ -14,15 +14,15 @@ module.exports = {
     "dialect": "mysql"
   },
 
-  "production": {
-  use_env_variable : 'DATABASE_URL',
-    dialect: "postgress",
-    protocol: "postgress",
-    dialectOptions: {
-      ssl : {
-        require : true,
-        rejectUnauthorized : false
-      }
-    }
-  }
+  // "production": {
+  // use_env_variable : 'DATABASE_URL',
+  //   dialect: "postgress",
+  //   protocol: "postgress",
+  //   dialectOptions: {
+  //     ssl : {
+  //       require : true,
+  //       rejectUnauthorized : false
+  //     }
+  //   }
+  // }
 };
