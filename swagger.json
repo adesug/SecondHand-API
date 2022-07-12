@@ -798,6 +798,24 @@
                                     },
                                     "status": {
                                         "example": "terbit"
+                                    },
+                                    "foto_array": {
+                                        "example" : 
+                                        [
+                                            "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg",
+                                            null,
+                                            null
+                                        ]
+                                    }  ,
+                                    "category_array": {
+                                        "example" : 
+                                        [
+                                            "Kendaraan",
+                                            "Kesehatan",
+                                            null,
+                                            null,
+                                            null
+                                        ]
                                     }
                                 }
                             }
