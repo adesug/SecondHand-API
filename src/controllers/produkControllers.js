@@ -1,7 +1,7 @@
 const {
   Product,
   Category,
-  User,
+  User,Notification
 } = require('../models')
 const {
   Op

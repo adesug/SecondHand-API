@@ -800,16 +800,14 @@
                                         "example": "terbit"
                                     },
                                     "foto_array": {
-                                        "example" : 
-                                        [
+                                        "example": [
                                             "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg",
                                             null,
                                             null
                                         ]
-                                    }  ,
+                                    },
                                     "category_array": {
-                                        "example" : 
-                                        [
+                                        "example": [
                                             "Kendaraan",
                                             "Kesehatan",
                                             null,
@@ -1469,6 +1467,69 @@
                 }
             }
         },
+        "/api/notif/unread": {
+            "get": {
+                "tags": [
+                    "Notifications"
+                ],
+                "description": "",
+                "parameters": [{
+                    "name": "authorization (200)",
+                    "in": "header",
+                    "type": "string",
+                    "schema": {
+                        "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT - ft - hWZQan8ncEEbXhoVtG4suiSGdN9wek "
+                    }
+                }, {
+                    "name": "unauthorization (401)",
+                    "in": "header",
+                    "type": "string",
+                    "schema": {
+                        "example": null
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "dataNotif": {
+                                        "type": "array",
+                                        "example": [{
+                                            "id": {
+                                                "example" : 1
+                                            },
+                                                "produk_id": { "example" : 57} ,
+                                                "user_id_buyer": {"example" : null} ,
+                                                "user_id_seller":  {"example" : 19} ,
+                                                "status": {"example" : "terbit"},
+                                                "status_baca": {"example" : "unread"},
+                                                "createdAt": {"example" : "2022-07-12T15:07:18.088Z"},
+                                                "updatedAt": {"example" :  "2022-07-12T15:07:18.088Z"}
+                                            
+                                        }]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        },
         "/api/notif/update/{id}": {
             "put": {
                 "tags": [
@@ -1476,17 +1537,47 @@
                 ],
                 "description": "",
                 "parameters": [{
-                    "name": "id",
-                    "in": "path",
-                    "required": true,
-                    "type": "string"
-                }],
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "authorization (200)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT-ft-hWZQan8ncEEbXhoVtG4suiSGdN9wek"
+                        }
+                    },
+                    {
+                        "name": "unauthorization (401)",
+                        "in": "header",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Success updated"
+                                }
+                            }
+                        }
                     },
-                    "400": {
-                        "description": "Bad Request"
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
                     }
                 }
             }
