@@ -473,7 +473,9 @@ class ProductController {
         ],
       })
       const foto_array = [product.foto_produk_1, product.foto_produk_2, product.foto_produk_3]
+      const category_array = [product.kategori_1.nama, product.kategori_2.nama, product.kategori_3, product.kategori_4, product.kategori_5]
       product.dataValues.foto_array = foto_array
+      product.dataValues.category_array = category_array
       res.status(200).json(
         product
       )
