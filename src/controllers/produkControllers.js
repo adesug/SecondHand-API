@@ -472,7 +472,11 @@ class ProductController {
           }
         ],
       })
-      res.status(200).json(product)
+      const foto_array = [product.foto_produk_1, product.foto_produk_2, product.foto_produk_3]
+      product.dataValues.foto_array = foto_array
+      res.status(200).json(
+        product
+      )
     } catch (err) {
       next(err)
     }

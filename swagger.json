@@ -5,7 +5,7 @@
         "description": "SecondHandApp",
         "version": "1.0.0"
     },
-    "host": "localhost:3000",
+    "host": "https://secondhandapp.herokuapp.com",
     "basePath": "/",
     "tags": [{
             "name": "User",
@@ -37,7 +37,8 @@
         }
     ],
     "schemes": [
-        "http"
+        "http",
+        "https"
     ],
     "paths": {
         "/doc": {
