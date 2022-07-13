@@ -850,6 +850,9 @@
                         "schema": {
                             "type": "object",
                             "properties": {
+                                "nama": {
+                                    "example": "nabila cilacap"
+                                },
                                 "foto_profil": {
                                     "example": "file"
                                 },
