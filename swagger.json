@@ -5,7 +5,7 @@
         "description": "SecondHandApp",
         "version": "1.0.0"
     },
-    "host": "https://secondhandapp.herokuapp.com",
+    "host": "secondhandapp.herokuapp.com",
     "basePath": "/",
     "tags": [{
             "name": "User",
@@ -884,6 +884,9 @@
                         "schema": {
                             "type": "object",
                             "properties": {
+                                "nama": {
+                                    "example": "nabila cilacap"
+                                },
                                 "foto_profil": {
                                     "example": "file"
                                 },
