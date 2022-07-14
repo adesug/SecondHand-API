@@ -80,7 +80,7 @@ class PenawaranController {
                     status: 'penawaran'
                 })
                 res.status(200).json({
-                    message: 'Successfully update product',
+                    message: 'Successfully update penawaran product',
                     notif,
                 })
             }
