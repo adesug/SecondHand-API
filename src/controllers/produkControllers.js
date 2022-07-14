@@ -2,7 +2,9 @@ const {
   Product,
   Category,
   User,
-  Notification
+  Notification,
+  Penawaran,
+  sequelize
 } = require('../models')
 const {
   Op
@@ -374,6 +376,11 @@ class ProductController {
             {
               model: Category,
               as: 'kategori_5'
+            }, {
+              model: User,
+              as: 'user',
+              attributes: ['id', 'nama', 'foto_profil', 'email', 'kota', 'alamat', 'telp']
+
             }
           ],
           limit: size,
@@ -470,11 +477,19 @@ class ProductController {
           {
             model: Category,
             as: 'kategori_5'
+          },
+          {
+            model: User,
+            as: 'user',
+            attributes: ['id', 'nama', 'foto_profil', 'email', 'kota', 'alamat', 'telp']
+
           }
         ],
       })
       const foto_array = [product.foto_produk_1, product.foto_produk_2, product.foto_produk_3]
+      const category_array = [product.kategori_1.nama, product.kategori_2.nama, product.kategori_3, product.kategori_4, product.kategori_5]
       product.dataValues.foto_array = foto_array
+      product.dataValues.category_array = category_array
       res.status(200).json(
         product
       )
@@ -520,6 +535,46 @@ class ProductController {
     }
   }
 
+  static async getProductDisukai(req, res, next) {
+    try {
+      const data = await Penawaran.findAll({
+        attributes:[],
+        where: {
+          user_id_seller: req.user.id
+        },
+        include: {
+          model: Product,
+          as:'produk'
+          
+        }
+      })
+
+      res.status(200).json({
+        data
+      })
+    } catch (err) {
+      next(err)
+    }
+  }
+
+
+  static async searchProduct(req, res, next) {
+    try {
+      let { q = "" } = req.query;
+      let data = await Product.findAll({
+        where: {
+          nama: sequelize.where(sequelize.fn('LOWER', sequelize.col('nama')), 'LIKE', `%${q}%`)
+        }
+      })
+
+      res.status(200).json({
+        data
+      })
+    } catch (err) {
+      next(err)
+    }
+  }
+  
 }
 
 module.exports = ProductController

@@ -28,9 +28,34 @@ class AuthController {
         password: hash
       })
 
-      res.status(200).json({
-        message: 'Successfully create user'
+      const userAfterCreate = await User.findOne({
+        where: {
+          email: req.body.email
+        }
       })
+      if (userAfterCreate) {
+        if(bcrypt.compareSync(req.body.password, userAfterCreate.password)){
+          const token = jwt.sign({
+            id: userAfterCreate.id,
+            email: userAfterCreate.email
+            
+          }, process.env.JWT_SECRET)
+          res.status(200).json({
+            message:'Successfully Create User',
+            token,
+          })
+        }else{
+          throw {
+            status: 400,
+            message: 'Invalid username or password'
+          }
+        }
+      }else {
+        throw {
+          status : 400,
+          message : 'Invalid username or password'
+        }
+      }
     } catch (err) {
       next(err)
     }

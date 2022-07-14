@@ -101,7 +101,7 @@ class PenawaranController {
                 })
             } else {
                 res.status(404).json({
-                    message:'Penawaran not found'
+                    message: 'Penawaran not found'
                 })
             }
 
@@ -130,5 +130,7 @@ class PenawaranController {
             next(err)
         }
     }
+
+
 }
 module.exports = PenawaranController

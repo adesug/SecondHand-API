@@ -47,6 +47,8 @@ router.get('/all',ProductController.listAll)
 router.put('/update/:id', authentication, ProductController.updateProduk)
 router.get('/list-by-id', ProductController.listIdProduct)
 router.get('/terjual', authentication, ProductController.getTerjual)
+router.get('/disukai', authentication, ProductController.getProductDisukai)
+router.get('/search-produk',ProductController.searchProduct)
 
 
 

@@ -1,6 +1,9 @@
 const {
     Notification
 } = require('../models')
+const {
+    Op
+  } = require('sequelize')
 
 class NotificationController {
     static async update (req,res,next){
@@ -35,6 +38,25 @@ class NotificationController {
             next(err)
         }
     }
+    static async  listBelumTerbaca(req,res,next) {
+        try {
+            const dataNotif = await Notification.findAll({
+                where:{
+                    status_baca : "unread",
+                    [Op.or]: [
+                        {user_id_seller : req.user.id},
+                        {user_id_buyer : req.user.id}
+                    ]
+                   
+                }
+            })
+            res.status(200).json({
+                dataNotif
+            })
+        } catch (err) {
+            next(err)
+        }
+    } 
 }
 
 module.exports = NotificationController

@@ -37,8 +37,9 @@
         }
     ],
     "schemes": [
-        "http",
-        "https"
+        "https",
+        "http"
+
     ],
     "paths": {
         "/doc": {
@@ -64,12 +65,15 @@
                             "type": "object",
                             "properties": {
                                 "nama": {
+                                    "type": "string",
                                     "example": "Ades"
                                 },
                                 "email": {
+                                    "type": "email",
                                     "example": "adesugiantr@gmail.com"
                                 },
                                 "password": {
+                                    "type": "string",
                                     "example": "1234567890"
                                 }
                             }
@@ -88,6 +92,7 @@
                                     "example": "adesugiantr@gmail.com"
                                 },
                                 "password": {
+                                    "type": "string",
                                     "example": "1234567890"
                                 }
                             }
@@ -106,6 +111,7 @@
                                     "example": "adesugiantr@gmail.com"
                                 },
                                 "password": {
+                                    "type": "string",
                                     "example": "1234567890"
                                 }
                             }
@@ -141,13 +147,10 @@
                     "422": {
                         "description": "Unprocessable Entity",
                         "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "message": {
-                                        "example": "Nama cant empty"
-                                    }
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Nama cant empty"
                                 }
                             }
                         }
@@ -234,13 +237,10 @@
                     "422": {
                         "description": "Unprocessable Entity",
                         "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "message": {
-                                        "example": "Password is required"
-                                    }
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Password is required"
                                 }
                             }
                         }
@@ -343,13 +343,37 @@
                     }
                 ],
                 "responses": {
-                    "200": {
+                    "201": {
                         "description": "OK",
                         "schema": {
                             "type": "object",
                             "properties": {
                                 "message": {
                                     "example": "Successfully create product in preview"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Successfully create product"
+
+                                },
+                                "notif": {
+                                    "example": {
+                                        "status_baca": "unread",
+                                        "id": 2,
+                                        "produk_id": 59,
+                                        "user_id_seller": 12,
+                                        "status": "terbit",
+                                        "updatedAt": "2022-07-14T12:33:40.151Z",
+                                        "createdAt": "2022-07-14T12:33:40.151Z",
+                                        "user_id_buyer": null
+                                    }
                                 }
                             }
                         }
@@ -379,13 +403,10 @@
                     "422": {
                         "description": "Unprocessable Entity",
                         "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "message": {
-                                        "example": "Nama harus diisi !"
-                                    }
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Nama harus diisi !"
                                 }
                             }
                         }
@@ -443,54 +464,29 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "example": 21
-                                    },
-                                    "nama": {
-                                        "example": "jam weeker"
-                                    },
-                                    "user_id": {
-                                        "example": 2
-                                    },
-                                    "harga": {
-                                        "example": 200000
-                                    },
-                                    "kategori_id_1": {
-                                        "example": 2
-                                    },
-                                    "kategori_id_2": {
-                                        "example": null
-                                    },
-                                    "kategori_id_3": {
-                                        "example": null
-                                    },
-                                    "kategori_id_4": {
-                                        "example": null
-                                    },
-                                    "kategori_id_5": {
-                                        "example": null
-                                    },
-                                    "deskripsi": {
-                                        "example": "barang bagus"
-                                    },
-                                    "foto_produk_1": {
-                                        "example": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg"
-                                    },
-                                    "foto_produk_2": {
-                                        "example": null
-                                    },
-                                    "foto_produk_3": {
-                                        "example": null
-                                    },
-                                    "status": {
-                                        "example": "terbit"
-                                    }
+                            "type": "object",
+                            "properties": {
+                                "content": {
+                                    "example": [{
+                                        "id": 21,
+                                        "nama": "jam weeker",
+                                        "user_id": 2,
+                                        "harga": 200000,
+                                        "kategori_id_1": 2,
+                                        "kategori_id_2": null,
+                                        "kategori_id_3": null,
+                                        "kategori_id_4": null,
+                                        "kategori_id_5": null,
+                                        "deskripsi": "barang bagus",
+                                        "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg",
+                                        "foto_produk_2": null,
+                                        "foto_produk_3": null,
+                                        "status": "terbit"
+
+                                    }]
                                 }
                             }
+
                         }
                     }
                 }
@@ -567,6 +563,50 @@
                                     },
                                     "status": {
                                         "example": "terbit"
+                                    },
+                                    "createdAt": {
+                                        "example": "2022-07-08T03:20:19.655Z"
+                                    },
+                                    "updatedAt": {
+                                        "example": "2022-07-08T03:20:19.655Z"
+                                    },
+                                    "kategori_1": {
+                                        "example": {
+                                            "id": 1,
+                                            "nama": "Hobi",
+                                            "createdAt": "2022-07-04T12:12:40.345Z",
+                                            "updatedAt": "2022-07-04T12:12:40.345Z"
+                                        }
+                                    },
+                                    "kategori_2": {
+                                        "example": {
+                                            "id": 3,
+                                            "nama": "Fashion",
+                                            "createdAt": "2022-07-04T12:12:40.345Z",
+                                            "updatedAt": "2022-07-04T12:12:40.345Z"
+                                        }
+                                    },
+                                    "kategori_3": {
+                                        "example": {
+                                            "id": 2,
+                                            "nama": "Kendaraan",
+                                            "createdAt": "2022-07-04T12:12:40.345Z",
+                                            "updatedAt": "2022-07-04T12:12:40.345Z"
+                                        }
+                                    },
+                                    "kategori_4": {
+                                        "example":{
+                                            "id": 5,
+                                            "nama": "Kesehatan",
+                                            "createdAt": "2022-07-04T12:12:40.345Z",
+                                            "updatedAt": "2022-07-04T12:12:40.345Z"
+                                        }
+                                    },
+                                    "kategori_5": {
+                                       "example":{ "id": 4,
+                                        "nama": "Elektronik",
+                                        "createdAt": "2022-07-04T12:12:40.345Z",
+                                        "updatedAt": "2022-07-04T12:12:40.345Z"}
                                     }
                                 }
                             }
@@ -681,52 +721,49 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "example": 21
-                                    },
-                                    "nama": {
-                                        "example": "jam weeker"
-                                    },
-                                    "user_id": {
-                                        "example": 2
-                                    },
-                                    "harga": {
-                                        "example": 200000
-                                    },
-                                    "kategori_id_1": {
-                                        "example": 2
-                                    },
-                                    "kategori_id_2": {
-                                        "example": null
-                                    },
-                                    "kategori_id_3": {
-                                        "example": null
-                                    },
-                                    "kategori_id_4": {
-                                        "example": null
-                                    },
-                                    "kategori_id_5": {
-                                        "example": null
-                                    },
-                                    "deskripsi": {
-                                        "example": "barang bagus"
-                                    },
-                                    "foto_produk_1": {
-                                        "example": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg"
-                                    },
-                                    "foto_produk_2": {
-                                        "example": null
-                                    },
-                                    "foto_produk_3": {
-                                        "example": null
-                                    },
-                                    "status": {
-                                        "example": "terbit"
-                                    }
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "example": 21
+                                },
+                                "nama": {
+                                    "example": "jam weeker"
+                                },
+                                "user_id": {
+                                    "example": 2
+                                },
+                                "harga": {
+                                    "example": 200000
+                                },
+                                "kategori_id_1": {
+                                    "example": 2
+                                },
+                                "kategori_id_2": {
+                                    "example": null
+                                },
+                                "kategori_id_3": {
+                                    "example": null
+                                },
+                                "kategori_id_4": {
+                                    "example": null
+                                },
+                                "kategori_id_5": {
+                                    "example": null
+                                },
+                                "deskripsi": {
+                                    "example": "barang bagus"
+                                },
+                                "foto_produk_1": {
+                                    "example": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg"
+                                },
+                                "foto_produk_2": {
+                                    "example": null
+                                },
+                                "foto_produk_3": {
+                                    "example": null
+                                },
+                                "status": {
+                                    "example": "terbit"
                                 }
                             }
                         }
@@ -753,54 +790,67 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "example": 3
-                                    },
-                                    "nama": {
-                                        "example": "jam weeker"
-                                    },
-                                    "user_id": {
-                                        "example": 2
-                                    },
-                                    "harga": {
-                                        "example": 200000
-                                    },
-                                    "kategori_id_1": {
-                                        "example": 2
-                                    },
-                                    "kategori_id_2": {
-                                        "example": null
-                                    },
-                                    "kategori_id_3": {
-                                        "example": null
-                                    },
-                                    "kategori_id_4": {
-                                        "example": null
-                                    },
-                                    "kategori_id_5": {
-                                        "example": null
-                                    },
-                                    "deskripsi": {
-                                        "example": "barang bagus"
-                                    },
-                                    "foto_produk_1": {
-                                        "example": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg"
-                                    },
-                                    "foto_produk_2": {
-                                        "example": null
-                                    },
-                                    "foto_produk_3": {
-                                        "example": null
-                                    },
-                                    "status": {
-                                        "example": "terbit"
-                                    }
+                            "properties": {
+                                "id": {
+                                    "example": 3
+                                },
+                                "nama": {
+                                    "example": "jam weeker"
+                                },
+                                "user_id": {
+                                    "example": 2
+                                },
+                                "harga": {
+                                    "example": 200000
+                                },
+                                "kategori_id_1": {
+                                    "example": 2
+                                },
+                                "kategori_id_2": {
+                                    "example": null
+                                },
+                                "kategori_id_3": {
+                                    "example": null
+                                },
+                                "kategori_id_4": {
+                                    "example": null
+                                },
+                                "kategori_id_5": {
+                                    "example": null
+                                },
+                                "deskripsi": {
+                                    "example": "barang bagus"
+                                },
+                                "foto_produk_1": {
+                                    "example": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg"
+                                },
+                                "foto_produk_2": {
+                                    "example": null
+                                },
+                                "foto_produk_3": {
+                                    "example": null
+                                },
+                                "status": {
+                                    "example": "terbit"
+                                },
+                                "foto_array": {
+                                    "example": [
+                                        "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg",
+                                        null,
+                                        null
+                                    ]
+                                },
+                                "category_array": {
+                                    "example": [
+                                        "Kendaraan",
+                                        "Kesehatan",
+                                        null,
+                                        null,
+                                        null
+                                    ]
                                 }
                             }
+
                         }
                     }
                 }
@@ -858,7 +908,22 @@
                             "properties": {
                                 "message": {
                                     "example": "Successfully update data user"
+                                },
+                                "resObject": {
+                                    "example": {
+                                        "id": 26,
+                                        "nama": "ades",
+                                        "foto_profil": "https: //res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg",
+                                        "email": "ades@gmail.com",
+                                        "password": "$2a$10$FpmLwck2UOsanRL4Hc/i6.ufsaKGIrs27wzvBTtTes4LeYmGzWTHC",
+                                        "kota": "banjarnegara",
+                                        "alamat": "Jl jalan",
+                                        "telp": "089767867674",
+                                        "createdAt": "2022-07-08T03:18:13.852Z",
+                                        "updatedAt": "2022-07-08T03:18:13.852Z"
+                                    }
                                 }
+
                             }
                         }
                     },
@@ -1353,32 +1418,30 @@
                         "description": "OK",
                         "schema": {
                             "type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "example": 31
-                                    },
-                                    "user_id": {
-                                        "example": 19
-                                    },
-                                    "produk_id": {
-                                        "example": 2
-                                    },
-                                    "createdAt": {
-                                        "example": "2022-07-09T18:00:08.424Z"
-                                    },
-                                    "updateAt": {
-                                        "example": "2022-07-09T18:00:08.424Z"
-                                    }
+                            "properties": {
+                                "id": {
+                                    "example": 31
                                 },
-                                "properties2": {
-                                    "user_id": {
-                                        "example": 2
+                                "user_id": {
+                                    "example": 19
+                                },
+                                "produk_id": {
+                                    "example": 2
+                                },
+                                "createdAt": {
+                                    "example": "2022-07-09T18:00:08.424Z"
+                                },
+                                "updateAt": {
+                                    "example": "2022-07-09T18:00:08.424Z"
+                                }
+                            },
+                            "properties2": {
+                                "user_id": {
+                                    "example": 2
 
-                                    }
                                 }
                             }
+
                         }
                     },
                     "401": {
@@ -1451,6 +1514,81 @@
                 }
             }
         },
+        "/api/notif/unread": {
+            "get": {
+                "tags": [
+                    "Notifications"
+                ],
+                "description": "",
+                "parameters": [{
+                    "name": "authorization (200)",
+                    "in": "header",
+                    "type": "string",
+                    "schema": {
+                        "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT - ft - hWZQan8ncEEbXhoVtG4suiSGdN9wek "
+                    }
+                }, {
+                    "name": "unauthorization (401)",
+                    "in": "header",
+                    "type": "string",
+                    "schema": {
+                        "example": null
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "properties": {
+                                "dataNotif": {
+                                    "type": "array",
+                                    "example": [{
+                                        "id": {
+                                            "example": 1
+                                        },
+                                        "produk_id": {
+                                            "example": 57
+                                        },
+                                        "user_id_buyer": {
+                                            "example": null
+                                        },
+                                        "user_id_seller": {
+                                            "example": 19
+                                        },
+                                        "status": {
+                                            "example": "terbit"
+                                        },
+                                        "status_baca": {
+                                            "example": "unread"
+                                        },
+                                        "createdAt": {
+                                            "example": "2022-07-12T15:07:18.088Z"
+                                        },
+                                        "updatedAt": {
+                                            "example": "2022-07-12T15:07:18.088Z"
+                                        }
+
+                                    }]
+                                }
+                            }
+
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        },
         "/api/notif/update/{id}": {
             "put": {
                 "tags": [
@@ -1458,17 +1596,47 @@
                 ],
                 "description": "",
                 "parameters": [{
-                    "name": "id",
-                    "in": "path",
-                    "required": true,
-                    "type": "string"
-                }],
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "authorization (200)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT-ft-hWZQan8ncEEbXhoVtG4suiSGdN9wek"
+                        }
+                    },
+                    {
+                        "name": "unauthorization (401)",
+                        "in": "header",
+                        "type": "string"
+                    }
+                ],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Success updated"
+                                }
+                            }
+                        }
                     },
-                    "400": {
-                        "description": "Bad Request"
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1529,22 +1697,146 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "id": {
-                                        "example": 1
-                                    },
-                                    "nama": {
-                                        "example": "Hobi"
-                                    },
-                                    "createdAt": {
-                                        "example": "2022-07-04T12:48:43.413Z"
-                                    },
-                                    "updatedAt": {
-                                        "example": "2022-07-04T12:48:43.413Z"
-                                    }
+                            "properties": {
+                                "id": {
+                                    "example": 1
+                                },
+                                "nama": {
+                                    "example": "Hobi"
+                                },
+                                "createdAt": {
+                                    "example": "2022-07-04T12:48:43.413Z"
+                                },
+                                "updatedAt": {
+                                    "example": "2022-07-04T12:48:43.413Z"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/product/search-produk?q=jam": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "description": "",
+                "parameters": [{
+                    "name": "q",
+                    "in": "query",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "properties": {
+                                "data": {
+                                    "example": [{
+                                        "id": 21,
+                                        "nama": "jam weeker",
+                                        "user_id": 2,
+                                        "harga": 200000,
+                                        "kategori_id_1": 2,
+                                        "kategori_id_2": null,
+                                        "kategori_id_3": null,
+                                        "kategori_id_4": null,
+                                        "kategori_id_5": null,
+                                        "deskripsi": "barang bagus",
+                                        "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg",
+                                        "foto_produk_2": null,
+                                        "foto_produk_3": null,
+                                        "status": "terbit"
 
+                                    }]
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        },
+        "/api/product/disukai": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "description": "",
+                "parameters": [{
+                    "name": "authorization",
+                    "in": "header",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+
+                            "properties": {
+                                "data": {
+                                    "example": [{
+                                            "produk": {
+                                                "id": 57,
+                                                "nama": "jam dinding",
+                                                "user_id": 12,
+                                                "harga": 200000,
+                                                "kategori_id_1": 1,
+                                                "kategori_id_2": 3,
+                                                "kategori_id_3": 2,
+                                                "kategori_id_4": 5,
+                                                "kategori_id_5": 4,
+                                                "deskripsi": "bagus",
+                                                "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1657801988/bstfmqqjapqorkncl3tf.png",
+                                                "foto_produk_2": null,
+                                                "foto_produk_3": null,
+                                                "status": "preview",
+                                                "createdAt": "2022-07-14T12:33:06.868Z",
+                                                "updatedAt": "2022-07-14T12:33:06.868Z"
+                                            }
+                                        },
+                                        {
+                                            "produk": {
+                                                "id": 58,
+                                                "nama": "jam ",
+                                                "user_id": 12,
+                                                "harga": 200000,
+                                                "kategori_id_1": 1,
+                                                "kategori_id_2": 3,
+                                                "kategori_id_3": 2,
+                                                "kategori_id_4": 5,
+                                                "kategori_id_5": 4,
+                                                "deskripsi": "bagus",
+                                                "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1657801997/urf7mseheo3yiaqput6k.png",
+                                                "foto_produk_2": null,
+                                                "foto_produk_3": null,
+                                                "status": "preview",
+                                                "createdAt": "2022-07-14T12:33:15.816Z",
+                                                "updatedAt": "2022-07-14T12:33:15.816Z"
+                                            }
+                                        },
+                                        {
+                                            "produk": {
+                                                "id": 59,
+                                                "nama": "jam ",
+                                                "user_id": 12,
+                                                "harga": 200000,
+                                                "kategori_id_1": 1,
+                                                "kategori_id_2": 3,
+                                                "kategori_id_3": 2,
+                                                "kategori_id_4": 5,
+                                                "kategori_id_5": 4,
+                                                "deskripsi": "bagus",
+                                                "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1657802021/qd21uxqgwu68smtlgihv.png",
+                                                "foto_produk_2": null,
+                                                "foto_produk_3": null,
+                                                "status": "terbit",
+                                                "createdAt": "2022-07-14T12:33:40.141Z",
+                                                "updatedAt": "2022-07-14T12:33:40.141Z"
+                                            }
+                                        }
+                                    ]
                                 }
                             }
                         }
@@ -1553,4 +1845,6 @@
             }
         }
     }
+
+
 }
