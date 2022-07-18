@@ -24,6 +24,6 @@ const upload = multer({
 
 router.put('/update', upload.single('foto_profil'), authentication, UserController.update)
 
-router.get('/detail-user/:nama', UserController.detail)
+router.get('/detail-user/:id', UserController.detail)
 
 module.exports = router

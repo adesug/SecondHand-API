@@ -44,10 +44,11 @@ class UpdateUserController {
         try {
             const user = await User.findOne({
                 where: {
-                    nama:req.params.nama
+                    id:req.params.id
                 }
             })
             res.status(200).json({
+                id:user.id,
                 nama: user.nama,
                 email: user.email,
                 foto_profil: user.foto_profil,
