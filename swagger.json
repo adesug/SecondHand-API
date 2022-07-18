@@ -723,48 +723,38 @@
                         "schema": {
                             "type": "object",
                             "properties": {
-                                "id": {
-                                    "example": 21
-                                },
-                                "nama": {
-                                    "example": "jam weeker"
-                                },
-                                "user_id": {
-                                    "example": 2
-                                },
-                                "harga": {
-                                    "example": 200000
-                                },
-                                "kategori_id_1": {
-                                    "example": 2
-                                },
-                                "kategori_id_2": {
-                                    "example": null
-                                },
-                                "kategori_id_3": {
-                                    "example": null
-                                },
-                                "kategori_id_4": {
-                                    "example": null
-                                },
-                                "kategori_id_5": {
-                                    "example": null
-                                },
-                                "deskripsi": {
-                                    "example": "barang bagus"
-                                },
-                                "foto_produk_1": {
-                                    "example": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg"
-                                },
-                                "foto_produk_2": {
-                                    "example": null
-                                },
-                                "foto_produk_3": {
-                                    "example": null
-                                },
-                                "status": {
-                                    "example": "terbit"
-                                }
+                               "content" : {
+                                "example" : [
+                                    {
+                                        "id": 3,
+                                        "nama": "Baju koko",
+                                        "user_id": 1,
+                                        "harga": 5000,
+                                        "kategori_id_1": 3,
+                                        "kategori_id_2": null,
+                                        "kategori_id_3": null,
+                                        "kategori_id_4": null,
+                                        "kategori_id_5": null,
+                                        "deskripsi": "Baju baru ges",
+                                        "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+                                        "foto_produk_2": "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+                                        "foto_produk_3": "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+                                        "status": "terbit",
+                                        "createdAt": "2022-06-29T13:09:06.629Z",
+                                        "updatedAt": "2022-06-29T13:09:06.629Z",
+                                        "kategori_1": {
+                                            "id": 3,
+                                            "nama": "Fashion",
+                                            "createdAt": "2022-06-29T13:09:06.567Z",
+                                            "updatedAt": "2022-06-29T13:09:06.567Z"
+                                        },
+                                        "kategori_2": null,
+                                        "kategori_3": null,
+                                        "kategori_4": null,
+                                        "kategori_5": null
+                                    }
+                                ]
+                               }
                             }
                         }
 
@@ -987,7 +977,10 @@
                             "type": "object",
                             "properties": {
                                 "message": {
-                                    "example": "Successfully Bid"
+                                    "example": "Successfully"
+                                },
+                                "status": {
+                                    "example" : 200
                                 },
                                 "findProduct": {
                                     "example": {
@@ -1133,7 +1126,7 @@
                             "type": "object",
                             "properties": {
                                 "message": {
-                                    "example": "Success Update Product"
+                                    "example": "Success update penawaran product"
                                 },
                                 "notif": {
                                     "example": {
@@ -1421,6 +1414,8 @@
                         "description": "OK",
                         "schema": {
                             "type": "array",
+                            "items": {
+                            "type": "object",
                             "properties": {
                                 "id": {
                                     "example": 31
@@ -1437,13 +1432,8 @@
                                 "updateAt": {
                                     "example": "2022-07-09T18:00:08.424Z"
                                 }
-                            },
-                            "properties2": {
-                                "user_id": {
-                                    "example": 2
-
-                                }
                             }
+                        }
 
                         }
                     },
