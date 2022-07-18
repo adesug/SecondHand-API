@@ -5,11 +5,11 @@ class UpdateUserController {
     static async update(req,res,next) {
         try {
             // const {id} = req.params;
-            const foto_profil = await cloudinary.uploader.upload(req.file.path);
+            // const foto_profil = await cloudinary.uploader.upload(req.file.path);
             const {body} = req;
             let newData = {
                 ...body,
-                foto_profil: foto_profil.secure_url    
+                // foto_profil: foto_profil.secure_url    
             }
             console.log(newData);
             let findUser = await User.findOne({

@@ -1,0 +1,351 @@
+[{
+        "produk_id": 44,
+        "user_id_seller": 5,
+        "user_id_buyer": 15,
+        "harga_penawaran": 40839,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 36,
+        "user_id_seller": 15,
+        "user_id_buyer": 9,
+        "harga_penawaran": 97032,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 11,
+        "user_id_seller": 19,
+        "user_id_buyer": 20,
+        "harga_penawaran": 75906,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 22,
+        "user_id_seller": 20,
+        "user_id_buyer": 9,
+        "harga_penawaran": 53752,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 48,
+        "user_id_seller": 3,
+        "user_id_buyer": 18,
+        "harga_penawaran": 94347,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 14,
+        "user_id_seller": 15,
+        "user_id_buyer": 9,
+        "harga_penawaran": 72945,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 7,
+        "user_id_seller": 11,
+        "user_id_buyer": 18,
+        "harga_penawaran": 73006,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 7,
+        "user_id_seller": 1,
+        "user_id_buyer": 20,
+        "harga_penawaran": 27513,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 27,
+        "user_id_seller": 15,
+        "user_id_buyer": 9,
+        "harga_penawaran": 20933,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 18,
+        "user_id_seller": 20,
+        "user_id_buyer": 5,
+        "harga_penawaran": 96759,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 36,
+        "user_id_seller": 4,
+        "user_id_buyer": 10,
+        "harga_penawaran": 96936,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 53,
+        "user_id_seller": 10,
+        "user_id_buyer": 3,
+        "harga_penawaran": 94817,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 42,
+        "user_id_seller": 3,
+        "user_id_buyer": 6,
+        "harga_penawaran": 45177,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 15,
+        "user_id_seller": 18,
+        "user_id_buyer": 18,
+        "harga_penawaran": 88828,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 20,
+        "user_id_seller": 1,
+        "user_id_buyer": 12,
+        "harga_penawaran": 55467,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 30,
+        "user_id_seller": 7,
+        "user_id_buyer": 6,
+        "harga_penawaran": 68597,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 2,
+        "user_id_seller": 12,
+        "user_id_buyer": 1,
+        "harga_penawaran": 65261,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 41,
+        "user_id_seller": 1,
+        "user_id_buyer": 8,
+        "harga_penawaran": 24840,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 23,
+        "user_id_seller": 3,
+        "user_id_buyer": 3,
+        "harga_penawaran": 66345,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 45,
+        "user_id_seller": 5,
+        "user_id_buyer": 18,
+        "harga_penawaran": 79664,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 32,
+        "user_id_seller": 2,
+        "user_id_buyer": 12,
+        "harga_penawaran": 57565,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 38,
+        "user_id_seller": 7,
+        "user_id_buyer": 2,
+        "harga_penawaran": 92449,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 46,
+        "user_id_seller": 2,
+        "user_id_buyer": 9,
+        "harga_penawaran": 35593,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 15,
+        "user_id_seller": 6,
+        "user_id_buyer": 9,
+        "harga_penawaran": 30551,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 13,
+        "user_id_seller": 10,
+        "user_id_buyer": 2,
+        "harga_penawaran": 70520,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 51,
+        "user_id_seller": 13,
+        "user_id_buyer": 20,
+        "harga_penawaran": 87129,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 42,
+        "user_id_seller": 13,
+        "user_id_buyer": 9,
+        "harga_penawaran": 95002,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 5,
+        "user_id_seller": 19,
+        "user_id_buyer": 15,
+        "harga_penawaran": 80127,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 26,
+        "user_id_seller": 14,
+        "user_id_buyer": 5,
+        "harga_penawaran": 48026,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 44,
+        "user_id_seller": 9,
+        "user_id_buyer": 6,
+        "harga_penawaran": 33205,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 15,
+        "user_id_seller": 19,
+        "user_id_buyer": 4,
+        "harga_penawaran": 35766,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 36,
+        "user_id_seller": 3,
+        "user_id_buyer": 18,
+        "harga_penawaran": 58982,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 30,
+        "user_id_seller": 8,
+        "user_id_buyer": 7,
+        "harga_penawaran": 53657,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 6,
+        "user_id_seller": 6,
+        "user_id_buyer": 8,
+        "harga_penawaran": 97232,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 29,
+        "user_id_seller": 10,
+        "user_id_buyer": 10,
+        "harga_penawaran": 79752,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 42,
+        "user_id_seller": 1,
+        "user_id_buyer": 4,
+        "harga_penawaran": 89836,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 7,
+        "user_id_seller": 6,
+        "user_id_buyer": 2,
+        "harga_penawaran": 86384,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 48,
+        "user_id_seller": 17,
+        "user_id_buyer": 19,
+        "harga_penawaran": 99637,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 10,
+        "user_id_seller": 6,
+        "user_id_buyer": 10,
+        "harga_penawaran": 25008,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 4,
+        "user_id_seller": 14,
+        "user_id_buyer": 5,
+        "harga_penawaran": 61323,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 45,
+        "user_id_seller": 6,
+        "user_id_buyer": 2,
+        "harga_penawaran": 42023,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 38,
+        "user_id_seller": 11,
+        "user_id_buyer": 7,
+        "harga_penawaran": 79224,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 44,
+        "user_id_seller": 13,
+        "user_id_buyer": 8,
+        "harga_penawaran": 90787,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 40,
+        "user_id_seller": 10,
+        "user_id_buyer": 4,
+        "harga_penawaran": 43509,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 11,
+        "user_id_seller": 20,
+        "user_id_buyer": 4,
+        "harga_penawaran": 40768,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 55,
+        "user_id_seller": 4,
+        "user_id_buyer": 19,
+        "harga_penawaran": 77006,
+        "status": "ditawar"
+    },
+    {
+        "produk_id": 29,
+        "user_id_seller": 18,
+        "user_id_buyer": 19,
+        "harga_penawaran": 82784,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 11,
+        "user_id_seller": 15,
+        "user_id_buyer": 15,
+        "harga_penawaran": 52418,
+        "status": "ditolak"
+    },
+    {
+        "produk_id": 12,
+        "user_id_seller": 6,
+        "user_id_buyer": 7,
+        "harga_penawaran": 61677,
+        "status": "diterima"
+    },
+    {
+        "produk_id": 48,
+        "user_id_seller": 20,
+        "user_id_buyer": 4,
+        "harga_penawaran": 31909,
+        "status": "ditawar"
+    }
+]

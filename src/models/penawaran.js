@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'user_id_buyer',
         as: 'buyer'
       })
+      Penawaran.belongsTo(models.User, {
+        foreignKey: 'user_id_seller',
+        as: 'seller'
+      })
       Penawaran.belongsTo(models.Product, {
         foreignKey: 'produk_id',
         as: 'produk'
