@@ -34,12 +34,13 @@ class PenawaranController {
                 })
 
                 notif = await Notification.create({
-                    produk_id: req.body.produk_id,
+                    produk_id: req.params.id,
                     user_id_buyer: req.user.id,
                     user_id_seller: findProduct.user_id,
                     status: 'penawaran'
                 })
             }
+            console.log(notif)
             res.status(200).json({
                 message: "success",
                 status: 200,
@@ -93,6 +94,10 @@ class PenawaranController {
             const penawaran = await Penawaran.findAll({
                 where: {
                     user_id_seller: req.user.id
+                },
+                include: {
+                    model: Product,
+                    as: "produk"
                 }
             })
             if (penawaran) {
@@ -114,6 +119,10 @@ class PenawaranController {
             const penawaran = await Penawaran.findAll({
                 where: {
                     user_id_buyer: req.user.id
+                },
+                include: {
+                    model: Product,
+                    as: "produk"
                 }
             })
             if (penawaran) {

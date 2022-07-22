@@ -21,7 +21,7 @@ const userValidationLogin = () => {
 const validateCreateProduk = () => {
   return [
     body('nama').notEmpty().withMessage('Nama Harus diisi!'),
-    body('kategori_id_1').notEmpty().withMessage('kategori minimal 1!'),
+    body('kategori').notEmpty().withMessage('kategori minimal 1!'),
     body('harga').notEmpty().withMessage('Harga harus diisi!'),
     body('deskripsi').notEmpty().withMessage('Deskripsi harus diisi'),
   ]

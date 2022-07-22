@@ -22,7 +22,10 @@ module.exports = (sequelize, DataTypes) => {
       Penawaran.belongsTo(models.Product, {
         foreignKey: 'produk_id',
         as: 'produk'
-
+      })
+      Penawaran.hasMany(models.Notification, {
+        foreignKey: 'produk_id',
+        as: 'penawaran'
       })
     }
   }

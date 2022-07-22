@@ -10,7 +10,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Notification.belongsTo(models.Product, {
+        foreignKey: 'produk_id',
+        as: 'product',
+      })
+      Notification.belongsTo(models.Penawaran, {
+        foreignKey: 'produk_id',
+        as: 'penawaran',
+      })
     }
   }
   Notification.init({
@@ -23,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     status_baca: {
       type: DataTypes.ENUM,
-      values: ['unread','read'],
+      values: ['unread', 'read'],
       defaultValue: 'unread'
     },
   }, {

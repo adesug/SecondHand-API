@@ -43,6 +43,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'kategori_id_5',
         as: 'kategori_5',
       })
+      Product.hasMany(models.Notification, {
+        foreignKey: 'produk_id',
+        as: 'notif'
+      })
     }
   }
   Product.init({
@@ -60,7 +64,7 @@ module.exports = (sequelize, DataTypes) => {
     foto_produk_3: DataTypes.STRING,
     status: {
       type: DataTypes.ENUM,
-      values: ['terbit','preview','terjual'],
+      values: ['terbit', 'preview', 'terjual'],
       defaultValue: 'terbit'
     }
   }, {

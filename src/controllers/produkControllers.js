@@ -24,6 +24,8 @@ class ProductController {
         }
 
       })
+      const kategori_array = req.body.kategori
+      console.log(kategori_array)
       // console.log(user.nama);
       if (user.foto_profil != null && user.kota != null && user.alamat != null && user.telp != null) {
         if (req.files.foto_produk_1 && req.files.foto_produk_2 && req.files.foto_produk_3) {
@@ -34,11 +36,11 @@ class ProductController {
             nama: req.body.nama,
             user_id: req.user.id,
             harga: req.body.harga,
-            kategori_id_1: req.body.kategori_id_1,
-            kategori_id_2: req.body.kategori_id_2,
-            kategori_id_3: req.body.kategori_id_3,
-            kategori_id_4: req.body.kategori_id_4,
-            kategori_id_5: req.body.kategori_id_5,
+            kategori_id_1: kategori_array[0],
+            kategori_id_2: kategori_array[1],
+            kategori_id_3: kategori_array[2],
+            kategori_id_4: kategori_array[3],
+            kategori_id_5: kategori_array[4],
             deskripsi: req.body.deskripsi,
             status: req.body.status,
             foto_produk_1: foto_produk_1.secure_url,
@@ -56,11 +58,11 @@ class ProductController {
             nama: req.body.nama,
             user_id: req.user.id,
             harga: req.body.harga,
-            kategori_id_1: req.body.kategori_id_1,
-            kategori_id_2: req.body.kategori_id_2,
-            kategori_id_3: req.body.kategori_id_3,
-            kategori_id_4: req.body.kategori_id_4,
-            kategori_id_5: req.body.kategori_id_5,
+            kategori_id_1: kategori_array[0],
+            kategori_id_2: kategori_array[1],
+            kategori_id_3: kategori_array[2],
+            kategori_id_4: kategori_array[3],
+            kategori_id_5: kategori_array[4],
             deskripsi: req.body.deskripsi,
             status: req.body.status,
             foto_produk_1: foto_produk_1.secure_url,
@@ -75,11 +77,11 @@ class ProductController {
             nama: req.body.nama,
             user_id: req.user.id,
             harga: req.body.harga,
-            kategori_id_1: req.body.kategori_id_1,
-            kategori_id_2: req.body.kategori_id_2,
-            kategori_id_3: req.body.kategori_id_3,
-            kategori_id_4: req.body.kategori_id_4,
-            kategori_id_5: req.body.kategori_id_5,
+            kategori_id_1: kategori_array[0],
+            kategori_id_2: kategori_array[1],
+            kategori_id_3: kategori_array[2],
+            kategori_id_4: kategori_array[3],
+            kategori_id_5: kategori_array[4],
             deskripsi: req.body.deskripsi,
             status: req.body.status,
             foto_produk_1: foto_produk_1.secure_url,
@@ -111,7 +113,6 @@ class ProductController {
           message: 'Lengkapi data diri !'
         })
       }
-
     } catch (err) {
       next(err)
     }
@@ -538,14 +539,14 @@ class ProductController {
   static async getProductDisukai(req, res, next) {
     try {
       const data = await Penawaran.findAll({
-        attributes:[],
+        attributes: [],
         where: {
           user_id_seller: req.user.id
         },
         include: {
           model: Product,
-          as:'produk'
-          
+          as: 'produk'
+
         }
       })
 
@@ -560,7 +561,9 @@ class ProductController {
 
   static async searchProduct(req, res, next) {
     try {
-      let { q = "" } = req.query;
+      let {
+        q = ""
+      } = req.query;
       let data = await Product.findAll({
         where: {
           nama: sequelize.where(sequelize.fn('LOWER', sequelize.col('nama')), 'LIKE', `%${q}%`)
@@ -574,7 +577,7 @@ class ProductController {
       next(err)
     }
   }
-  
+
 }
 
 module.exports = ProductController
