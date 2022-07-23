@@ -545,7 +545,33 @@ class ProductController {
         },
         include: {
           model: Product,
-          as: 'produk'
+          as: 'produk',
+          include : [{
+            model: Category,
+            as : 'kategori_1'
+          },
+          {
+            model: Category,
+            as : 'kategori_2'
+          },
+          {
+            model: Category,
+            as : 'kategori_3'
+          },
+          {
+            model: Category,
+            as : 'kategori_4'
+          },
+          {
+            model: Category,
+            as : 'kategori_5'
+          },
+        ],
+         
+
+         
+        
+         
         }
       })
       const disukai = []

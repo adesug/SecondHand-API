@@ -1706,7 +1706,22 @@
                                         "foto_produk_3": null,
                                         "status": "preview",
                                         "createdAt": "2022-07-04T12:51:30.359Z",
-                                        "updatedAt": "2022-07-04T12:51:30.359Z"
+                                        "updatedAt": "2022-07-04T12:51:30.359Z",
+                                        "kategori_1": {
+                                            "id": 2,
+                                            "nama": "Kendaraan",
+                                            "createdAt": "2022-07-04T12:51:30.342Z",
+                                            "updatedAt": "2022-07-04T12:51:30.342Z"
+                                        },
+                                        "kategori_2": {
+                                            "id": 4,
+                                            "nama": "Elektronik",
+                                            "createdAt": "2022-07-04T12:51:30.342Z",
+                                            "updatedAt": "2022-07-04T12:51:30.342Z"
+                                        },
+                                        "kategori_3": null,
+                                        "kategori_4": null,
+                                        "kategori_5": null
                                         }
                                     ]
                                 }
