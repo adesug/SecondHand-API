@@ -47,10 +47,10 @@ class NotificationController {
     }
     static async listBelumTerbaca(req, res, next) {
         try {
-            const dataNotif = await Notification.findAll({
+            let data = await Notification.findAll({
                 where: {
                     status_baca: "unread",
-                    status: 'terbit',
+                    // status: 'terbit',
                     [Op.or]: [{
                             user_id_seller: req.user.id
                         },
@@ -64,38 +64,58 @@ class NotificationController {
                     as: 'product',
                 }
             })
-            const dataNotifPenawaran = await Notification.findAll({
-                where: {
-                    status_baca: "unread",
-                    status: 'penawaran',
-                    [Op.or]: [{
-                            user_id_seller: req.user.id
-                        },
-                        {
-                            user_id_buyer: req.user.id
-                        }
-                    ]
-                },
-                include: {
-                    model: Penawaran,
-                    as: 'penawaran',
-                    include: {
-                        model: Product,
-                        as: 'produk',
+
+            // const dataNotifPenawaran = await Notification.findAll({
+            //     where: {
+            //         status_baca: "unread",
+            //         status: 'penawaran',
+            //         [Op.or]: [{
+            //                 user_id_seller: req.user.id
+            //             },
+            //             {
+            //                 user_id_buyer: req.user.id
+            //             }
+            //         ]
+            //     },
+            //     include: {
+            //         model: Penawaran,
+            //         as: 'penawaran',
+            //         include: {
+            //             model: Product,
+            //             as: 'produk',
+            //         }
+            //     }
+            // })
+
+            // const data = [dataNotif,dataNotifPenawaran]
+
+            let notif = []
+            data = JSON.stringify(data);
+            data = JSON.parse(data);
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].product !== null) {
+                    let obj = {
+                        id: data[i].id,
+                        status_notif:data[i].status,
+                        product_id: data[i].product.id,
+                        nama_product: data[i].product.nama,
+                        user_id: data[i].product.user_id,
+                        harga: data[i].product.harga,
+                        foto_produk_1: data[i].product.foto_produk_1
                     }
-                }
-            })
-
-            const data = [dataNotif,dataNotifPenawaran]
-
+                    notif.push(
+                        obj
+                    )
+                } 
+            }
             res.status(200).json({
-                data
+                notif
             })
         } catch (err) {
             next(err)
         }
     }
-  
+
 }
 
 module.exports = NotificationController

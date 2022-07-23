@@ -47,6 +47,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'produk_id',
         as: 'notif'
       })
+      Product.hasMany(models.Wishlist, {
+        foreignKey: 'produk_id',
+        as: 'produk'
+      })
     }
   }
   Product.init({

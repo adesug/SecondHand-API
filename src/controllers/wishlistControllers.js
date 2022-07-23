@@ -30,11 +30,19 @@ class WishlistController {
     static async list(req,res,next) {
         try {
             const data = await Wishlist.findAll({
+                attributes: [],
                 where: {
                     user_id : req.user.id
+                }, include: {
+                    model: Product,
+                    as:"produk"
                 }
             })
-            res.status(200).json(data)
+            const wishlist = []
+            for (let i = 0; i < data.length; i++) {
+                wishlist.push(data[i].produk)
+            }
+            res.status(200).json(wishlist)
         } catch (err) {
             next(err)
         }

@@ -546,12 +546,14 @@ class ProductController {
         include: {
           model: Product,
           as: 'produk'
-
         }
       })
-
+      const disukai = []
+      for (let i = 0; i < data.length; i++){
+        disukai.push(data[i].produk)
+      }
       res.status(200).json({
-        data
+        disukai
       })
     } catch (err) {
       next(err)
