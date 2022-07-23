@@ -1,4 +1,4 @@
-const { Wishlist, Product} = require('../models')
+const { Wishlist, Product, Category} = require('../models')
 const jwt = require('jsonwebtoken')
 
 class WishlistController {
@@ -29,18 +29,37 @@ class WishlistController {
     }
     static async list(req,res,next) {
         try {
-            const data = await Wishlist.findAll({
-                attributes: [],
+        let data = await Wishlist.findAll({
+                attributes: ['id'],
                 where: {
                     user_id : req.user.id
-                }, include: {
+                }, 
+                include: {
                     model: Product,
-                    as:"produk"
+                    as:"produk",
+                    include : {
+                        model : Category,
+                        as:"kategori_1"
+                    }
                 }
             })
-            const wishlist = []
+            let wishlist = []
+            data = JSON.stringify(data)
+            data =JSON.parse(data)
+            console.log(data[0].produk);
             for (let i = 0; i < data.length; i++) {
-                wishlist.push(data[i].produk)
+                if(data[i].produk.kategori_1 !== null) {
+                    let obj = {
+                        id_wishlist : data[i].id,
+                        id_produk : data[i].produk.id,
+                        nama:  data[i].produk.nama,
+                        kategori_1 : data[i].produk.kategori_1.nama,
+                        harga : data[i].produk.harga,
+                        foto_produk_1 : data[i].produk.foto_produk_1
+                    }
+                    wishlist.push(obj)
+                }
+               
             }
             res.status(200).json(wishlist)
         } catch (err) {
