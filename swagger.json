@@ -1343,20 +1343,23 @@
                             "items": {
                                 "type": "object",
                                 "properties": {
-                                    "id": {
+                                    "id_wishlist": {
                                         "example": 31
                                     },
-                                    "user_id": {
-                                        "example": 19
-                                    },
-                                    "produk_id": {
+                                    "id_produk": {
                                         "example": 2
                                     },
-                                    "createdAt": {
-                                        "example": "2022-07-09T18:00:08.424Z"
+                                    "nama": {
+                                        "example": "Buick"
                                     },
-                                    "updateAt": {
-                                        "example": "2022-07-09T18:00:08.424Z"
+                                    "kategori_1": {
+                                        "example": "Kendaraan"
+                                    },
+                                    "harga": {
+                                        "example": 389769
+                                    },
+                                    "foto_produk_1": {
+                                        "example": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
                                     }
                                 }
                             }
@@ -1459,72 +1462,26 @@
                         "description": "OK",
                         "schema": {
                             "properties": {
-                                "dataNotif": {
+                                "notif": {
                                     "type": "array",
                                     "example": [{
-                                        "id": 1,
-                                        "produk_id": 57,
-                                        "user_id_buyer": null,
-                                        "user_id_seller": 19,
-                                        "status": "terbit",
-                                        "status_baca": "unread",
-                                        "createdAt": "2022-07-12T15:07:18.088Z",
-                                        "updatedAt": "2022-07-12T15:07:18.088Z",
-                                        "product": {
-                                            "id": 54,
-                                            "nama": "jam ",
-                                            "user_id": 11,
-                                            "harga": 200000,
-                                            "kategori_id_1": 1,
-                                            "kategori_id_2": 3,
-                                            "kategori_id_3": 2,
-                                            "kategori_id_4": 5,
-                                            "kategori_id_5": 4,
-                                            "deskripsi": "bagus",
-                                            "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1658410353/l2qzsakrdin5jwukinrg.png",
-                                            "foto_produk_2": null,
-                                            "foto_produk_3": null,
-                                            "status": "terbit",
-                                            "createdAt": "2022-07-21T13:32:32.651Z",
-                                            "updatedAt": "2022-07-21T13:32:32.651Z"
-                                        }
+                                        "id": 2,
+                                        "status_notif": "penawaran",
+                                        "product_id": 2,
+                                        "nama_product": "Buick",
+                                        "user_id": 1,
+                                        "harga": 389769,
+                                        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+
                                     }, {
-                                        "id": 105,
-                                        "produk_id": 12,
-                                        "user_id_buyer": 11,
-                                        "user_id_seller": 4,
-                                        "status": "penawaran",
-                                        "status_baca": "unread",
-                                        "createdAt": "2022-07-21T13:37:53.773Z",
-                                        "updatedAt": "2022-07-21T13:37:53.773Z",
-                                        "penawaran": {
-                                            "id": 12,
-                                            "produk_id": 53,
-                                            "user_id_buyer": 3,
-                                            "user_id_seller": 10,
-                                            "harga_penawaran": 94817,
-                                            "status": "ditolak",
-                                            "createdAt": "2022-07-21T12:41:47.973Z",
-                                            "updatedAt": "2022-07-21T12:41:47.973Z",
-                                            "produk": {
-                                                "id": 53,
-                                                "nama": "Nissan",
-                                                "user_id": 3,
-                                                "harga": 653740,
-                                                "kategori_id_1": 5,
-                                                "kategori_id_2": 2,
-                                                "kategori_id_3": 1,
-                                                "kategori_id_4": 3,
-                                                "kategori_id_5": null,
-                                                "deskripsi": "in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna",
-                                                "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
-                                                "foto_produk_2": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
-                                                "foto_produk_3": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
-                                                "status": "terbit",
-                                                "createdAt": "2022-07-21T12:41:46.867Z",
-                                                "updatedAt": "2022-07-21T12:41:46.867Z"
-                                            }
-                                        }
+                                        "id": 3,
+                                        "status_notif": "penawaran",
+                                        "product_id": 30,
+                                        "nama_product": "BMW",
+                                        "user_id": 5,
+                                        "harga": 228167,
+                                        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+
                                     }]
                                 }
                             }
@@ -1732,66 +1689,39 @@
                         "schema": {
 
                             "properties": {
-                                "data": {
+                                "disukai": {
                                     "example": [{
-                                            "produk": {
-                                                "id": 57,
-                                                "nama": "jam dinding",
-                                                "user_id": 12,
-                                                "harga": 200000,
-                                                "kategori_id_1": 1,
-                                                "kategori_id_2": 3,
-                                                "kategori_id_3": 2,
-                                                "kategori_id_4": 5,
-                                                "kategori_id_5": 4,
-                                                "deskripsi": "bagus",
-                                                "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1657801988/bstfmqqjapqorkncl3tf.png",
-                                                "foto_produk_2": null,
-                                                "foto_produk_3": null,
-                                                "status": "preview",
-                                                "createdAt": "2022-07-14T12:33:06.868Z",
-                                                "updatedAt": "2022-07-14T12:33:06.868Z"
-                                            }
+                                        "id": 2,
+                                        "nama": "Buick",
+                                        "user_id": 1,
+                                        "harga": 389769,
+                                        "kategori_id_1": 2,
+                                        "kategori_id_2": 4,
+                                        "kategori_id_3": null,
+                                        "kategori_id_4": null,
+                                        "kategori_id_5": null,
+                                        "deskripsi": "magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum",
+                                        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+                                        "foto_produk_2": null,
+                                        "foto_produk_3": null,
+                                        "status": "preview",
+                                        "createdAt": "2022-07-04T12:51:30.359Z",
+                                        "updatedAt": "2022-07-04T12:51:30.359Z",
+                                        "kategori_1": {
+                                            "id": 2,
+                                            "nama": "Kendaraan",
+                                            "createdAt": "2022-07-04T12:51:30.342Z",
+                                            "updatedAt": "2022-07-04T12:51:30.342Z"
                                         },
-                                        {
-                                            "produk": {
-                                                "id": 58,
-                                                "nama": "jam ",
-                                                "user_id": 12,
-                                                "harga": 200000,
-                                                "kategori_id_1": 1,
-                                                "kategori_id_2": 3,
-                                                "kategori_id_3": 2,
-                                                "kategori_id_4": 5,
-                                                "kategori_id_5": 4,
-                                                "deskripsi": "bagus",
-                                                "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1657801997/urf7mseheo3yiaqput6k.png",
-                                                "foto_produk_2": null,
-                                                "foto_produk_3": null,
-                                                "status": "preview",
-                                                "createdAt": "2022-07-14T12:33:15.816Z",
-                                                "updatedAt": "2022-07-14T12:33:15.816Z"
-                                            }
+                                        "kategori_2": {
+                                            "id": 4,
+                                            "nama": "Elektronik",
+                                            "createdAt": "2022-07-04T12:51:30.342Z",
+                                            "updatedAt": "2022-07-04T12:51:30.342Z"
                                         },
-                                        {
-                                            "produk": {
-                                                "id": 59,
-                                                "nama": "jam ",
-                                                "user_id": 12,
-                                                "harga": 200000,
-                                                "kategori_id_1": 1,
-                                                "kategori_id_2": 3,
-                                                "kategori_id_3": 2,
-                                                "kategori_id_4": 5,
-                                                "kategori_id_5": 4,
-                                                "deskripsi": "bagus",
-                                                "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1657802021/qd21uxqgwu68smtlgihv.png",
-                                                "foto_produk_2": null,
-                                                "foto_produk_3": null,
-                                                "status": "terbit",
-                                                "createdAt": "2022-07-14T12:33:40.141Z",
-                                                "updatedAt": "2022-07-14T12:33:40.141Z"
-                                            }
+                                        "kategori_3": null,
+                                        "kategori_4": null,
+                                        "kategori_5": null
                                         }
                                     ]
                                 }

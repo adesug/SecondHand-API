@@ -31,6 +31,8 @@ module.exports = (sequelize, DataTypes) => {
          foreignKey: 'kategori_id_5',
          as: 'kategori_5'
        })
+     
+  
     }
   }
   Category.init({

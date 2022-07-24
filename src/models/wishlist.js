@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'produk_id',
         as: 'produk',
       })
+     
     }
   }
   Wishlist.init({
