@@ -46,7 +46,6 @@ class WishlistController {
             let wishlist = []
             data = JSON.stringify(data)
             data =JSON.parse(data)
-            console.log(data[0].produk);
             for (let i = 0; i < data.length; i++) {
                 if(data[i].produk.kategori_1 !== null) {
                     let obj = {

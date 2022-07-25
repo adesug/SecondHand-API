@@ -594,8 +594,29 @@ class ProductController {
       } = req.query;
       let data = await Product.findAll({
         where: {
-          nama: sequelize.where(sequelize.fn('LOWER', sequelize.col('nama')), 'LIKE', `%${q}%`)
-        }
+          nama: sequelize.where(sequelize.fn('LOWER', sequelize.col('Product.nama')), 'LIKE', `%${q}%`)
+        },
+        include: [{
+            model: Category,
+            as: 'kategori_1'
+          },
+          {
+            model: Category,
+            as: 'kategori_2'
+          },
+          {
+            model: Category,
+            as: 'kategori_3'
+          },
+          {
+            model: Category,
+            as: 'kategori_4'
+          },
+          {
+            model: Category,
+            as: 'kategori_5'
+          }
+        ]
       })
 
       res.status(200).json({

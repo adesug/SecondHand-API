@@ -65,30 +65,6 @@ class NotificationController {
                 }
             })
 
-            // const dataNotifPenawaran = await Notification.findAll({
-            //     where: {
-            //         status_baca: "unread",
-            //         status: 'penawaran',
-            //         [Op.or]: [{
-            //                 user_id_seller: req.user.id
-            //             },
-            //             {
-            //                 user_id_buyer: req.user.id
-            //             }
-            //         ]
-            //     },
-            //     include: {
-            //         model: Penawaran,
-            //         as: 'penawaran',
-            //         include: {
-            //             model: Product,
-            //             as: 'produk',
-            //         }
-            //     }
-            // })
-
-            // const data = [dataNotif,dataNotifPenawaran]
-
             let notif = []
             data = JSON.stringify(data);
             data = JSON.parse(data);

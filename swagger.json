@@ -1661,8 +1661,37 @@
                                         "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg",
                                         "foto_produk_2": null,
                                         "foto_produk_3": null,
-                                        "status": "terbit"
-
+                                        "status": "terbit",
+                                        "kategori_1": {
+                                            "id": 1,
+                                            "nama": "Hobi",
+                                            "createdAt": "2022-07-21T12:41:46.754Z",
+                                            "updatedAt": "2022-07-21T12:41:46.754Z"
+                                        },
+                                        "kategori_2": {
+                                            "id": 3,
+                                            "nama": "Fashion",
+                                            "createdAt": "2022-07-21T12:41:46.754Z",
+                                            "updatedAt": "2022-07-21T12:41:46.754Z"
+                                        },
+                                        "kategori_3": {
+                                            "id": 2,
+                                            "nama": "Kendaraan",
+                                            "createdAt": "2022-07-21T12:41:46.754Z",
+                                            "updatedAt": "2022-07-21T12:41:46.754Z"
+                                        },
+                                        "kategori_4": {
+                                            "id": 5,
+                                            "nama": "Kesehatan",
+                                            "createdAt": "2022-07-21T12:41:46.754Z",
+                                            "updatedAt": "2022-07-21T12:41:46.754Z"
+                                        },
+                                        "kategori_5": {
+                                            "id": 4,
+                                            "nama": "Elektronik",
+                                            "createdAt": "2022-07-21T12:41:46.754Z",
+                                            "updatedAt": "2022-07-21T12:41:46.754Z"
+                                        }
                                     }]
                                 }
                             }
