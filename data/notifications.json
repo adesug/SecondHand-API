@@ -1,0 +1,701 @@
+[{
+        "produk_id": 52,
+        "user_id_buyer": 14,
+        "user_id_seller": 16,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 26,
+        "user_id_buyer": 12,
+        "user_id_seller": 17,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 99,
+        "user_id_buyer": 2,
+        "user_id_seller": 16,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 45,
+        "user_id_buyer": 10,
+        "user_id_seller": 30,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 81,
+        "user_id_buyer": 25,
+        "user_id_seller": 4,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 57,
+        "user_id_buyer": 25,
+        "user_id_seller": 20,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 96,
+        "user_id_buyer": 10,
+        "user_id_seller": 20,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 95,
+        "user_id_buyer": 7,
+        "user_id_seller": 13,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 94,
+        "user_id_buyer": 1,
+        "user_id_seller": 7,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 4,
+        "user_id_buyer": 24,
+        "user_id_seller": 8,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 11,
+        "user_id_buyer": 13,
+        "user_id_seller": 25,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 41,
+        "user_id_buyer": 23,
+        "user_id_seller": 11,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 77,
+        "user_id_buyer": 12,
+        "user_id_seller": 24,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 61,
+        "user_id_buyer": 23,
+        "user_id_seller": 13,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 63,
+        "user_id_buyer": 19,
+        "user_id_seller": 16,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 11,
+        "user_id_buyer": 4,
+        "user_id_seller": 17,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 31,
+        "user_id_buyer": 5,
+        "user_id_seller": 1,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 74,
+        "user_id_buyer": 1,
+        "user_id_seller": 15,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 57,
+        "user_id_buyer": 13,
+        "user_id_seller": 5,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 11,
+        "user_id_buyer": 12,
+        "user_id_seller": 20,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 9,
+        "user_id_buyer": 12,
+        "user_id_seller": 5,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 59,
+        "user_id_buyer": 26,
+        "user_id_seller": 3,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 36,
+        "user_id_buyer": 21,
+        "user_id_seller": 4,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 36,
+        "user_id_buyer": 16,
+        "user_id_seller": 15,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 57,
+        "user_id_buyer": 20,
+        "user_id_seller": 7,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 51,
+        "user_id_buyer": 5,
+        "user_id_seller": 20,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 26,
+        "user_id_buyer": 1,
+        "user_id_seller": 22,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 37,
+        "user_id_buyer": 27,
+        "user_id_seller": 22,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 14,
+        "user_id_buyer": 19,
+        "user_id_seller": 29,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 95,
+        "user_id_buyer": 23,
+        "user_id_seller": 14,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 52,
+        "user_id_buyer": 20,
+        "user_id_seller": 22,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 70,
+        "user_id_buyer": 23,
+        "user_id_seller": 6,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 89,
+        "user_id_buyer": 15,
+        "user_id_seller": 16,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 22,
+        "user_id_buyer": 22,
+        "user_id_seller": 19,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 99,
+        "user_id_buyer": 17,
+        "user_id_seller": 9,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 64,
+        "user_id_buyer": 8,
+        "user_id_seller": 26,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 71,
+        "user_id_buyer": 16,
+        "user_id_seller": 16,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 73,
+        "user_id_buyer": 20,
+        "user_id_seller": 22,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 77,
+        "user_id_buyer": 29,
+        "user_id_seller": 12,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 91,
+        "user_id_buyer": 29,
+        "user_id_seller": 29,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 69,
+        "user_id_buyer": 14,
+        "user_id_seller": 17,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 94,
+        "user_id_buyer": 20,
+        "user_id_seller": 2,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 12,
+        "user_id_buyer": 24,
+        "user_id_seller": 2,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 90,
+        "user_id_buyer": 22,
+        "user_id_seller": 4,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 92,
+        "user_id_buyer": 25,
+        "user_id_seller": 30,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 81,
+        "user_id_buyer": 22,
+        "user_id_seller": 11,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 34,
+        "user_id_buyer": 27,
+        "user_id_seller": 25,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 55,
+        "user_id_buyer": 30,
+        "user_id_seller": 8,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 12,
+        "user_id_buyer": 26,
+        "user_id_seller": 29,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 92,
+        "user_id_buyer": 4,
+        "user_id_seller": 22,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 22,
+        "user_id_buyer": 1,
+        "user_id_seller": 14,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 12,
+        "user_id_buyer": 30,
+        "user_id_seller": 13,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 95,
+        "user_id_buyer": 12,
+        "user_id_seller": 16,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 30,
+        "user_id_buyer": 24,
+        "user_id_seller": 6,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 38,
+        "user_id_buyer": 17,
+        "user_id_seller": 30,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 22,
+        "user_id_buyer": 17,
+        "user_id_seller": 18,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 88,
+        "user_id_buyer": 9,
+        "user_id_seller": 16,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 33,
+        "user_id_buyer": 30,
+        "user_id_seller": 18,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 51,
+        "user_id_buyer": 21,
+        "user_id_seller": 12,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 51,
+        "user_id_buyer": 21,
+        "user_id_seller": 29,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 67,
+        "user_id_buyer": 5,
+        "user_id_seller": 6,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 84,
+        "user_id_buyer": 21,
+        "user_id_seller": 2,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 27,
+        "user_id_buyer": 11,
+        "user_id_seller": 8,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 13,
+        "user_id_buyer": 3,
+        "user_id_seller": 15,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 84,
+        "user_id_buyer": 25,
+        "user_id_seller": 3,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 75,
+        "user_id_buyer": 23,
+        "user_id_seller": 12,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 92,
+        "user_id_buyer": 30,
+        "user_id_seller": 7,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 21,
+        "user_id_buyer": 4,
+        "user_id_seller": 17,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 46,
+        "user_id_buyer": 26,
+        "user_id_seller": 26,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 87,
+        "user_id_buyer": 23,
+        "user_id_seller": 27,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 43,
+        "user_id_buyer": 30,
+        "user_id_seller": 2,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 21,
+        "user_id_buyer": 15,
+        "user_id_seller": 19,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 88,
+        "user_id_buyer": 17,
+        "user_id_seller": 26,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 95,
+        "user_id_buyer": 7,
+        "user_id_seller": 15,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 25,
+        "user_id_buyer": 6,
+        "user_id_seller": 12,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 37,
+        "user_id_buyer": 1,
+        "user_id_seller": 9,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 82,
+        "user_id_buyer": 9,
+        "user_id_seller": 8,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 6,
+        "user_id_buyer": 20,
+        "user_id_seller": 17,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 15,
+        "user_id_buyer": 26,
+        "user_id_seller": 22,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 62,
+        "user_id_buyer": 20,
+        "user_id_seller": 28,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 80,
+        "user_id_buyer": 14,
+        "user_id_seller": 20,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 52,
+        "user_id_buyer": 7,
+        "user_id_seller": 18,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 10,
+        "user_id_buyer": 13,
+        "user_id_seller": 13,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 54,
+        "user_id_buyer": 1,
+        "user_id_seller": 24,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 6,
+        "user_id_buyer": 14,
+        "user_id_seller": 25,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 11,
+        "user_id_buyer": 18,
+        "user_id_seller": 21,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 56,
+        "user_id_buyer": 27,
+        "user_id_seller": 30,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 29,
+        "user_id_buyer": 22,
+        "user_id_seller": 22,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 89,
+        "user_id_buyer": 18,
+        "user_id_seller": 14,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 36,
+        "user_id_buyer": 19,
+        "user_id_seller": 29,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 26,
+        "user_id_buyer": 25,
+        "user_id_seller": 23,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 51,
+        "user_id_buyer": 26,
+        "user_id_seller": 28,
+        "status": "terbit",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 27,
+        "user_id_buyer": 24,
+        "user_id_seller": 30,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 62,
+        "user_id_buyer": 7,
+        "user_id_seller": 4,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 65,
+        "user_id_buyer": 18,
+        "user_id_seller": 24,
+        "status": "terbit",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 8,
+        "user_id_buyer": 19,
+        "user_id_seller": 23,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 5,
+        "user_id_buyer": 6,
+        "user_id_seller": 19,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 33,
+        "user_id_buyer": 30,
+        "user_id_seller": 3,
+        "status": "penawaran",
+        "status_baca": "unread"
+    },
+    {
+        "produk_id": 24,
+        "user_id_buyer": 7,
+        "user_id_seller": 23,
+        "status": "penawaran",
+        "status_baca": "read"
+    },
+    {
+        "produk_id": 77,
+        "user_id_buyer": 15,
+        "user_id_seller": 3,
+        "status": "terbit",
+        "status_baca": "read"
+    }
+]

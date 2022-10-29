@@ -1,0 +1,1766 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "SecondHand API",
+        "description": "SecondHandApp",
+        "version": "1.0.0"
+    },
+    "host": "secondhandapp.herokuapp.com",
+    "basePath": "/",
+    "tags": [{
+            "name": "User",
+            "description": "all about user"
+        },
+        {
+            "name": "Product",
+            "description": "all about product"
+        },
+        {
+            "name": "Penawaran",
+            "description": "all about penawaran"
+        },
+        {
+            "name": "Wishlist",
+            "description": "all about wishlist"
+        },
+        {
+            "name": "Notifications",
+            "description": "all about notifications"
+        },
+        {
+            "name": "Category",
+            "description": "all about Category"
+        },
+        {
+            "name": "Api Documentation",
+            "description": "Documentation with swagger"
+        }
+    ],
+    "schemes": [
+        "https",
+        "http"
+
+    ],
+    "paths": {
+        "/doc": {
+            "get": {
+                "tags": [
+                    "Api Documentation"
+                ],
+                "description": "",
+                "parameters": [],
+                "responses": {}
+            }
+        },
+        "/api/auth/register": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "description": "Register",
+                "parameters": [{
+                        "name": "200",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "nama": {
+                                    "type": "string",
+                                    "example": "Ades"
+                                },
+                                "email": {
+                                    "type": "email",
+                                    "example": "adesugiantr@gmail.com"
+                                },
+                                "password": {
+                                    "type": "string",
+                                    "example": "1234567890"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "400",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "nama": {
+                                    "example": "Adesug"
+                                },
+                                "email": {
+                                    "example": "adesugiantr@gmail.com"
+                                },
+                                "password": {
+                                    "type": "string",
+                                    "example": "1234567890"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "422",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "nama": {
+                                    "example": null
+                                },
+                                "email": {
+                                    "example": "adesugiantr@gmail.com"
+                                },
+                                "password": {
+                                    "type": "string",
+                                    "example": "1234567890"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Created",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Successfully create user"
+                                },
+                                "token": {
+                                    "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsImVtYWlsIjoiYWhtYWQ3QGdtYWlsLmNvbSIsImlhdCI6MTY1NzMzNzQ0OH0.pe3DuhMCiTovYL0e0GK-xgGayhDOPl-CyvXmtx_y7Sk"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request/Invalid Input",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Email already used"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Nama cant empty"
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        },
+        "/api/auth/login": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "description": "Login",
+                "parameters": [{
+                        "name": "200",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "example": "adesugiantr@gmail.com"
+                                },
+                                "password": {
+                                    "example": "1234567890"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "400",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "example": "adesugiantr@gmail.com"
+                                },
+                                "password": {
+                                    "example": "0987654321"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "422",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "example": "adesugiantr@gmail.com"
+                                },
+                                "password": {
+                                    "example": null
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "token": {
+                                    "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImVtYWlsIjoiYWRlc3VnaWFudHJAZ21haWwuY29tIiwiaWF0IjoxNjU3MzgzOTQ2fQ.q-GfDEBsYC9kAGklYjpk7KaTzu-mC-t2iGHBT-WwTeo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Invalid username or password"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Password is required"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/product/create": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "description": "Create Product",
+                "parameters": [{
+                        "name": "authorization (200)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT-ft-hWZQan8ncEEbXhoVtG4suiSGdN9wek"
+                        }
+
+                    },
+                    {
+                        "name": "unauthorization (401)",
+                        "in": "header",
+                        "type": "string"
+
+                    },
+                    {
+                        "name": "body (200)",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "nama": {
+                                    "example": "Jam Tangan"
+                                },
+                                "harga": {
+                                    "example": "2000000"
+                                },
+                                "kategori": {
+                                    "example": [1, 2, 3, 4]
+                                },
+                                "deskripsi": {
+                                    "example": "Jam Tangan untuk tangan kanan atau kiri"
+                                },
+                                "status": {
+                                    "example": "preview"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "body (422)",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "nama": {
+                                    "example": null
+                                },
+                                "harga": {
+                                    "example": "2000000"
+                                },
+                                "kategori": {
+                                    "example": [1, 2, 3, 4]
+                                },
+                                "deskripsi": {
+                                    "example": "Jam Tangan untuk tangan kanan atau kiri"
+                                },
+                                "status": {
+                                    "example": "preview"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Successfully create product in preview"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Successfully create product"
+
+                                },
+                                "notif": {
+                                    "example": {
+                                        "status_baca": "unread",
+                                        "id": 2,
+                                        "produk_id": 59,
+                                        "user_id_seller": 12,
+                                        "status": "terbit",
+                                        "updatedAt": "2022-07-14T12:33:40.151Z",
+                                        "createdAt": "2022-07-14T12:33:40.151Z",
+                                        "user_id_buyer": null
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Have not filled in personal data",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Please fill in your personal data first"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Nama harus diisi !"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/product/list": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "description": "",
+                "parameters": [{
+                        "name": "authorization (200)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT - ft - hWZQan8ncEEbXhoVtG4suiSGdN9wek "
+                        }
+                    },
+                    {
+                        "name": "unauthorization (401)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": null
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "type": "string",
+                        "schema": {
+                            "example": 1
+                        }
+                    }, {
+                        "name": "size",
+                        "in": "query",
+                        "type": "string",
+                        "schema": {
+                            "example": "3"
+                        }
+                    }, {
+                        "name": "page",
+                        "in": "query",
+                        "type": "string",
+                        "schema": {
+                            "example": "3"
+                        }
+
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "content": {
+                                    "example": [{
+                                        "id": 21,
+                                        "nama": "jam weeker",
+                                        "user_id": 2,
+                                        "harga": 200000,
+                                        "kategori_id_1": 2,
+                                        "kategori_id_2": null,
+                                        "kategori_id_3": null,
+                                        "kategori_id_4": null,
+                                        "kategori_id_5": null,
+                                        "deskripsi": "barang bagus",
+                                        "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg",
+                                        "foto_produk_2": null,
+                                        "foto_produk_3": null,
+                                        "status": "terbit"
+
+                                    }]
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        },
+        "/api/product/list-by-user": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "description": "",
+                "parameters": [{
+                        "name": "authorization (200)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT-ft-hWZQan8ncEEbXhoVtG4suiSGdN9wek"
+                        }
+                    },
+                    {
+                        "name": "unauthorization (401)",
+                        "in": "header",
+                        "type": "string"
+
+                    }
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "example": 21
+                                    },
+                                    "nama": {
+                                        "example": "jam weeker"
+                                    },
+                                    "user_id": {
+                                        "example": 2
+                                    },
+                                    "harga": {
+                                        "example": 200000
+                                    },
+                                    "kategori_id_1": {
+                                        "example": 2
+                                    },
+                                    "kategori_id_2": {
+                                        "example": null
+                                    },
+                                    "kategori_id_3": {
+                                        "example": null
+                                    },
+                                    "kategori_id_4": {
+                                        "example": null
+                                    },
+                                    "kategori_id_5": {
+                                        "example": null
+                                    },
+                                    "deskripsi": {
+                                        "example": "barang bagus"
+                                    },
+                                    "foto_produk_1": {
+                                        "example": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg"
+                                    },
+                                    "foto_produk_2": {
+                                        "example": null
+                                    },
+                                    "foto_produk_3": {
+                                        "example": null
+                                    },
+                                    "status": {
+                                        "example": "terbit"
+                                    },
+                                    "createdAt": {
+                                        "example": "2022-07-08T03:20:19.655Z"
+                                    },
+                                    "updatedAt": {
+                                        "example": "2022-07-08T03:20:19.655Z"
+                                    },
+                                    "kategori_1": {
+                                        "example": {
+                                            "id": 1,
+                                            "nama": "Hobi",
+                                            "createdAt": "2022-07-04T12:12:40.345Z",
+                                            "updatedAt": "2022-07-04T12:12:40.345Z"
+                                        }
+                                    },
+                                    "kategori_2": {
+                                        "example": {
+                                            "id": 3,
+                                            "nama": "Fashion",
+                                            "createdAt": "2022-07-04T12:12:40.345Z",
+                                            "updatedAt": "2022-07-04T12:12:40.345Z"
+                                        }
+                                    },
+                                    "kategori_3": {
+                                        "example": {
+                                            "id": 2,
+                                            "nama": "Kendaraan",
+                                            "createdAt": "2022-07-04T12:12:40.345Z",
+                                            "updatedAt": "2022-07-04T12:12:40.345Z"
+                                        }
+                                    },
+                                    "kategori_4": {
+                                        "example": {
+                                            "id": 5,
+                                            "nama": "Kesehatan",
+                                            "createdAt": "2022-07-04T12:12:40.345Z",
+                                            "updatedAt": "2022-07-04T12:12:40.345Z"
+                                        }
+                                    },
+                                    "kategori_5": {
+                                        "example": {
+                                            "id": 4,
+                                            "nama": "Elektronik",
+                                            "createdAt": "2022-07-04T12:12:40.345Z",
+                                            "updatedAt": "2022-07-04T12:12:40.345Z"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/product/deleteByUser/{id}": {
+            "delete": {
+                "tags": [
+                    "Product"
+                ],
+                "description": "",
+                "parameters": [{
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "example": 59
+                        }
+                    },
+                    {
+                        "name": "authorization (200)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT-ft-hWZQan8ncEEbXhoVtG4suiSGdN9wek"
+                        }
+                    },
+                    {
+                        "name": "unauthorization (401)",
+                        "in": "header",
+                        "type": "string"
+
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Successfully delete product"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized (401)",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/product/all": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "description": "",
+                "parameters": [{
+                        "name": "authorization",
+                        "in": "header",
+                        "type": "string"
+                    },
+                    {
+                        "name": "unauthorization (401)",
+                        "in": "header",
+                        "type": "string"
+
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "type": "string",
+                        "schema": {
+                            "example": "3"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "string",
+                        "schema": {
+                            "example": "3"
+                        }
+
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "content": {
+                                    "example": [{
+                                        "id": 3,
+                                        "nama": "Baju koko",
+                                        "user_id": 1,
+                                        "harga": 5000,
+                                        "kategori_id_1": 3,
+                                        "kategori_id_2": null,
+                                        "kategori_id_3": null,
+                                        "kategori_id_4": null,
+                                        "kategori_id_5": null,
+                                        "deskripsi": "Baju baru ges",
+                                        "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+                                        "foto_produk_2": "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+                                        "foto_produk_3": "https://res.cloudinary.com/desug/image/upload/v1655815072/jam_tangan_bluvmc.jpg",
+                                        "status": "terbit",
+                                        "createdAt": "2022-06-29T13:09:06.629Z",
+                                        "updatedAt": "2022-06-29T13:09:06.629Z",
+                                        "kategori_1": {
+                                            "id": 3,
+                                            "nama": "Fashion",
+                                            "createdAt": "2022-06-29T13:09:06.567Z",
+                                            "updatedAt": "2022-06-29T13:09:06.567Z"
+                                        },
+                                        "kategori_2": null,
+                                        "kategori_3": null,
+                                        "kategori_4": null,
+                                        "kategori_5": null
+                                    }]
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        },
+        "/api/product/list-by-id": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "description": "Get detail produk",
+                "parameters": [{
+                    "name": "id",
+                    "in": "query",
+                    "type": "string",
+                    "schema": {
+                        "example": "3"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "properties": {
+                                "id": {
+                                    "example": 3
+                                },
+                                "nama": {
+                                    "example": "jam weeker"
+                                },
+                                "user_id": {
+                                    "example": 2
+                                },
+                                "harga": {
+                                    "example": 200000
+                                },
+                                "kategori_id_1": {
+                                    "example": 2
+                                },
+                                "kategori_id_2": {
+                                    "example": null
+                                },
+                                "kategori_id_3": {
+                                    "example": null
+                                },
+                                "kategori_id_4": {
+                                    "example": null
+                                },
+                                "kategori_id_5": {
+                                    "example": null
+                                },
+                                "deskripsi": {
+                                    "example": "barang bagus"
+                                },
+                                "foto_produk_1": {
+                                    "example": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg"
+                                },
+                                "foto_produk_2": {
+                                    "example": null
+                                },
+                                "foto_produk_3": {
+                                    "example": null
+                                },
+                                "status": {
+                                    "example": "terbit"
+                                },
+                                "foto_array": {
+                                    "example": [
+                                        "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg",
+                                        null,
+                                        null
+                                    ]
+                                },
+                                "category_array": {
+                                    "example": [
+                                        "Kendaraan",
+                                        "Kesehatan",
+                                        null,
+                                        null,
+                                        null
+                                    ]
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user/update": {
+            "put": {
+                "tags": [
+                    "User"
+                ],
+                "description": "",
+                "parameters": [{
+                        "name": "authorization (200)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT-ft-hWZQan8ncEEbXhoVtG4suiSGdN9wek"
+                        }
+                    },
+                    {
+                        "name": "unauthorization (401)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": null
+                        }
+                    },
+                    {
+                        "name": "body (200)",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "nama": {
+                                    "example": "nabila cilacap"
+                                },
+                                "foto_profil": {
+                                    "example": "file"
+                                },
+                                "kota": {
+                                    "example": "banjarnegara"
+                                },
+                                "alamat": {
+                                    "example": "banjarnegara"
+                                },
+                                "telp": {
+                                    "example": "0987654321"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Successfully update data user"
+                                },
+                                "resObject": {
+                                    "example": {
+                                        "id": 26,
+                                        "nama": "ades",
+                                        "foto_profil": "https: //res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg",
+                                        "email": "ades@gmail.com",
+                                        "password": "$2a$10$FpmLwck2UOsanRL4Hc/i6.ufsaKGIrs27wzvBTtTes4LeYmGzWTHC",
+                                        "kota": "banjarnegara",
+                                        "alamat": "Jl jalan",
+                                        "telp": "089767867674",
+                                        "createdAt": "2022-07-08T03:18:13.852Z",
+                                        "updatedAt": "2022-07-08T03:18:13.852Z"
+                                    }
+                                }
+
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/penawaran/menawar/{id}": {
+            "post": {
+                "tags": [
+                    "Penawaran"
+                ],
+                "description": "",
+                "parameters": [{
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "authorization",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImVtYWlsIjoiYWRlc3VnaWFudHJAZ21haWwuY29tIiwiaWF0IjoxNjU3MzgzOTQ2fQ.q-GfDEBsYC9kAGklYjpk7KaTzu-mC-t2iGHBT-WwTeo"
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "harga_penawaran": {
+                                    "example": "500000"
+                                },
+                                "produk_id": {
+                                    "example": "1"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Successfully"
+                                },
+                                "status": {
+                                    "example": 200
+                                },
+                                "findProduct": {
+                                    "example": {
+                                        "id": 3,
+                                        "nama": "jam weeker",
+                                        "user_id": 2,
+                                        "harga": 200000,
+                                        "kategori_id_1": 2,
+                                        "kategori_id_2": null,
+                                        "kategori_id_3": null,
+                                        "kategori_id_4": null,
+                                        "kategori_id_5": null,
+                                        "deskripsi": "barang bagus",
+                                        "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg",
+                                        "foto_produk_2": null,
+                                        "foto_produk_3": null,
+                                        "status": "terbit"
+                                    }
+                                },
+                                "notif": {
+                                    "example": {
+                                        "status_baca": "unread",
+                                        "id": "2",
+                                        "produk_id": null,
+                                        "user_id_buyer": 1,
+                                        "user_id_seller": 1,
+                                        "status": "penawaran",
+                                        "updatedAt": "2022-07-01T13:58:04.127Z",
+                                        "createdAt": "2022-07-01T13:58:04.127Z"
+
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized "
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Product not found"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/penawaran/update": {
+            "put": {
+                "tags": [
+                    "Penawaran"
+                ],
+                "description": "",
+                "parameters": [{
+                        "name": "authorization",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImVtYWlsIjoiYWRlc3VnaWFudHJAZ21haWwuY29tIiwiaWF0IjoxNjU3MzgzOTQ2fQ.q-GfDEBsYC9kAGklYjpk7KaTzu-mC-t2iGHBT-WwTeo"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "example": "terjual"
+                                },
+                                "produk_id": {
+                                    "example": "2"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Success update penawaran product"
+                                },
+                                "notif": {
+                                    "example": {
+                                        "id": 10,
+                                        "produk_id": null,
+                                        "user_id_buyer": 2,
+                                        "user_id_seller": 1,
+                                        "status": "penawaran",
+                                        "updatedAt": "2022-06-29T13:25:14.762Z",
+                                        "createdAt": "2022-06-29T13:25:14.762Z"
+
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/penawaran/list-seller": {
+            "get": {
+                "tags": [
+                    "Penawaran"
+                ],
+                "description": "",
+                "parameters": [{
+                    "name": "authorization",
+                    "in": "header",
+                    "type": "string",
+                    "schema": {
+                        "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImVtYWlsIjoiYWRlc3VnaWFudHJAZ21haWwuY29tIiwiaWF0IjoxNjU3MzgzOTQ2fQ.q-GfDEBsYC9kAGklYjpk7KaTzu-mC-t2iGHBT-WwTeo"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "properties": {
+                                "penawaran": {
+                                    "example": [{
+                                        "id": 1,
+                                        "produk_id": 2,
+                                        "user_id_buyer": 2,
+                                        "user_id_seller": 1,
+                                        "harga_penawaran": 200,
+                                        "status": "diterima",
+                                        "createdAt": "2022-06-29T13:09:42.126Z",
+                                        "updatedAt": "2022-06-29T13:18:03.124Z",
+                                        "produk": {
+                                            "id": 38,
+                                            "nama": "Mitsubishi",
+                                            "user_id": 4,
+                                            "harga": 698263,
+                                            "kategori_id_1": 5,
+                                            "kategori_id_2": 3,
+                                            "kategori_id_3": null,
+                                            "kategori_id_4": null,
+                                            "kategori_id_5": null,
+                                            "deskripsi": "in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet",
+                                            "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+                                            "foto_produk_2": null,
+                                            "foto_produk_3": null,
+                                            "status": "preview",
+                                            "createdAt": "2022-07-21T12:41:46.867Z",
+                                            "updatedAt": "2022-07-21T12:41:46.867Z"
+                                        }
+
+                                    }]
+                                }
+                            }
+
+                        }
+                    },
+                    "404": {
+                        "description": "Penawaran Not Found",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Penawaran not Found"
+                                }
+                            }
+                        }
+
+                    },
+                    "401": {
+                        "description": "Unauthorized (401)",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/penawaran/list-buyer": {
+            "get": {
+                "tags": [
+                    "Penawaran"
+                ],
+                "description": "",
+                "parameters": [{
+                    "name": "authorization",
+                    "in": "header",
+                    "type": "string",
+                    "schema": {
+                        "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImVtYWlsIjoiYWRlc3VnaWFudHJAZ21haWwuY29tIiwiaWF0IjoxNjU3MzgzOTQ2fQ.q-GfDEBsYC9kAGklYjpk7KaTzu-mC-t2iGHBT-WwTeo"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "properties": {
+                                "penawaran": {
+                                    "example": [{
+                                        "id": 1,
+                                        "produk_id": 2,
+                                        "user_id_buyer": 2,
+                                        "user_id_seller": 1,
+                                        "harga_penawaran": 200,
+                                        "status": "diterima",
+                                        "createdAt": "2022-06-29T13:09:42.126Z",
+                                        "updatedAt": "2022-06-29T13:18:03.124Z",
+                                        "produk": {
+                                            "id": 38,
+                                            "nama": "Mitsubishi",
+                                            "user_id": 4,
+                                            "harga": 698263,
+                                            "kategori_id_1": 5,
+                                            "kategori_id_2": 3,
+                                            "kategori_id_3": null,
+                                            "kategori_id_4": null,
+                                            "kategori_id_5": null,
+                                            "deskripsi": "in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet",
+                                            "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+                                            "foto_produk_2": null,
+                                            "foto_produk_3": null,
+                                            "status": "preview",
+                                            "createdAt": "2022-07-21T12:41:46.867Z",
+                                            "updatedAt": "2022-07-21T12:41:46.867Z"
+                                        }
+
+                                    }]
+                                }
+                            }
+
+                        }
+                    },
+                    "404": {
+                        "description": "Penawaran Not Found",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Penawaran not Found"
+                                }
+                            }
+                        }
+
+                    },
+                    "401": {
+                        "description": "Unauthorized (401)",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/wishlist/create": {
+            "post": {
+                "tags": [
+                    "Wishlist"
+                ],
+                "description": "",
+                "parameters": [{
+                        "name": "authorization (200)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT-ft-hWZQan8ncEEbXhoVtG4suiSGdN9wek"
+                        }
+                    },
+                    {
+                        "name": "unauthorization (401)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": null
+                        }
+                    },
+                    {
+                        "name": "body (200)",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "produk_id": {
+                                    "example": 2
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Successfully add wishlist"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/wishlist/list": {
+            "get": {
+                "tags": [
+                    "Wishlist"
+                ],
+                "description": "",
+                "parameters": [{
+                        "name": "authorization (200)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT-ft-hWZQan8ncEEbXhoVtG4suiSGdN9wek"
+                        }
+                    },
+                    {
+                        "name": "unauthorization (401)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": null
+                        }
+                    }
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "id_wishlist": {
+                                        "example": 31
+                                    },
+                                    "id_produk": {
+                                        "example": 2
+                                    },
+                                    "nama": {
+                                        "example": "Buick"
+                                    },
+                                    "kategori_1": {
+                                        "example": "Kendaraan"
+                                    },
+                                    "harga": {
+                                        "example": 389769
+                                    },
+                                    "foto_produk_1": {
+                                        "example": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+                                    }
+                                }
+                            }
+
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/wishlist/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Wishlist"
+                ],
+                "description": "",
+                "parameters": [{
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                            "example": 1
+                        }
+                    },
+                    {
+                        "name": "authorization (200)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT-ft-hWZQan8ncEEbXhoVtG4suiSGdN9wek"
+                        }
+                    },
+                    {
+                        "name": "unauthorization (401)",
+                        "in": "header",
+                        "type": "string"
+
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Success deleted"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/notif/unread": {
+            "get": {
+                "tags": [
+                    "Notifications"
+                ],
+                "description": "",
+                "parameters": [{
+                    "name": "authorization (200)",
+                    "in": "header",
+                    "type": "string",
+                    "schema": {
+                        "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT - ft - hWZQan8ncEEbXhoVtG4suiSGdN9wek "
+                    }
+                }, {
+                    "name": "unauthorization (401)",
+                    "in": "header",
+                    "type": "string",
+                    "schema": {
+                        "example": null
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "properties": {
+                                "notif": {
+                                    "type": "array",
+                                    "example": [{
+                                        "id": 2,
+                                        "status_notif": "penawaran",
+                                        "product_id": 2,
+                                        "nama_product": "Buick",
+                                        "user_id": 1,
+                                        "harga": 389769,
+                                        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg"
+
+                                    }, {
+                                        "id": 3,
+                                        "status_notif": "penawaran",
+                                        "product_id": 30,
+                                        "nama_product": "BMW",
+                                        "user_id": 5,
+                                        "harga": 228167,
+                                        "foto_produk_1": "https://static.tildacdn.com/tild6361-3463-4331-b266-346635663831/350z_studio_bk_2_of_.jpg"
+
+                                    }]
+                                }
+                            }
+
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        },
+        "/api/notif/update/{id}": {
+            "put": {
+                "tags": [
+                    "Notifications"
+                ],
+                "description": "",
+                "parameters": [{
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "authorization (200)",
+                        "in": "header",
+                        "type": "string",
+                        "schema": {
+                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT-ft-hWZQan8ncEEbXhoVtG4suiSGdN9wek"
+                        }
+                    },
+                    {
+                        "name": "unauthorization (401)",
+                        "in": "header",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Success updated"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "example": "Unauthorized request"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user/detail-user/{nama}": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "description": "",
+                "parameters": [{
+                    "name": "nama",
+                    "in": "path",
+                    "required": true,
+                    "type": "string",
+                    "schema": {
+                        "example": "ades"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "nama": {
+                                    "example": "ades"
+                                },
+                                "email": {
+                                    "example": "adesugiantr@gmail.com"
+                                },
+                                "foto_profil": {
+                                    "example": "https://res.cloudinary.com/desug/image/upload/v1657198542/urveltygizc96dzotcj2.jpg"
+                                },
+                                "kota": {
+                                    "example": "banjarnegara"
+                                },
+                                "alamat": {
+                                    "example": "Jl jalan"
+                                },
+                                "telp": {
+                                    "example": "089767867674"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/category/category": {
+            "get": {
+                "tags": [
+                    "Category"
+                ],
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "properties": {
+                                "id": {
+                                    "example": 1
+                                },
+                                "nama": {
+                                    "example": "Hobi"
+                                },
+                                "createdAt": {
+                                    "example": "2022-07-04T12:48:43.413Z"
+                                },
+                                "updatedAt": {
+                                    "example": "2022-07-04T12:48:43.413Z"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/product/search-produk?q=jam": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "description": "",
+                "parameters": [{
+                    "name": "q",
+                    "in": "query",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "properties": {
+                                "data": {
+                                    "example": [{
+                                        "id": 21,
+                                        "nama": "jam weeker",
+                                        "user_id": 2,
+                                        "harga": 200000,
+                                        "kategori_id_1": 2,
+                                        "kategori_id_2": null,
+                                        "kategori_id_3": null,
+                                        "kategori_id_4": null,
+                                        "kategori_id_5": null,
+                                        "deskripsi": "barang bagus",
+                                        "foto_produk_1": "https://res.cloudinary.com/desug/image/upload/v1656425010/aidjp0hsfep3a4jq9agn.jpg",
+                                        "foto_produk_2": null,
+                                        "foto_produk_3": null,
+                                        "status": "terbit",
+                                        "kategori_1": {
+                                            "id": 1,
+                                            "nama": "Hobi",
+                                            "createdAt": "2022-07-21T12:41:46.754Z",
+                                            "updatedAt": "2022-07-21T12:41:46.754Z"
+                                        },
+                                        "kategori_2": {
+                                            "id": 3,
+                                            "nama": "Fashion",
+                                            "createdAt": "2022-07-21T12:41:46.754Z",
+                                            "updatedAt": "2022-07-21T12:41:46.754Z"
+                                        },
+                                        "kategori_3": {
+                                            "id": 2,
+                                            "nama": "Kendaraan",
+                                            "createdAt": "2022-07-21T12:41:46.754Z",
+                                            "updatedAt": "2022-07-21T12:41:46.754Z"
+                                        },
+                                        "kategori_4": {
+                                            "id": 5,
+                                            "nama": "Kesehatan",
+                                            "createdAt": "2022-07-21T12:41:46.754Z",
+                                            "updatedAt": "2022-07-21T12:41:46.754Z"
+                                        },
+                                        "kategori_5": {
+                                            "id": 4,
+                                            "nama": "Elektronik",
+                                            "createdAt": "2022-07-21T12:41:46.754Z",
+                                            "updatedAt": "2022-07-21T12:41:46.754Z"
+                                        }
+                                    }]
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        },
+        "/api/product/disukai": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "description": "",
+                "parameters": [{
+                    "name": "authorization",
+                    "in": "header",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+
+                            "properties": {
+                                "disukai": {
+                                    "example": [{
+                                        "id": 2,
+                                        "nama": "Buick",
+                                        "user_id": 1,
+                                        "harga": 389769,
+                                        "kategori_id_1": 2,
+                                        "kategori_id_2": 4,
+                                        "kategori_id_3": null,
+                                        "kategori_id_4": null,
+                                        "kategori_id_5": null,
+                                        "deskripsi": "magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum",
+                                        "foto_produk_1": "https://car-images.bauersecure.com/wp-images/13098/2022-gt-r-nismo-00.jpg",
+                                        "foto_produk_2": null,
+                                        "foto_produk_3": null,
+                                        "status": "preview",
+                                        "createdAt": "2022-07-04T12:51:30.359Z",
+                                        "updatedAt": "2022-07-04T12:51:30.359Z",
+                                        "kategori_1": {
+                                            "id": 2,
+                                            "nama": "Kendaraan",
+                                            "createdAt": "2022-07-04T12:51:30.342Z",
+                                            "updatedAt": "2022-07-04T12:51:30.342Z"
+                                        },
+                                        "kategori_2": {
+                                            "id": 4,
+                                            "nama": "Elektronik",
+                                            "createdAt": "2022-07-04T12:51:30.342Z",
+                                            "updatedAt": "2022-07-04T12:51:30.342Z"
+                                        },
+                                        "kategori_3": null,
+                                        "kategori_4": null,
+                                        "kategori_5": null
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
